@@ -7,8 +7,8 @@ This project is part of my **Flutter UI Practice** series where I recreate real-
 
 ## 🧰 Built With
 
-- **Flutter**
-- **Dart**
+- ***Flutter***
+- ***Dart***
 - Clean architecture: Core / Features
 - Organized widget-based structure
 
