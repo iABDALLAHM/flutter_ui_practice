@@ -16,14 +16,16 @@ This project is part of my **Flutter UI Practice** series where I recreate real-
 
 ## 📂 Project Structure
 
+```plaintext
 lib/
-├── core/ # Shared utilities
-│ └── utils/ # General-purpose utility functions
+├── core/                   # Shared utilities
+│   └── utils/             # General-purpose utilitize
 ├── features/
-│ └── auth1/ # Auth group 1 (Login/Register UI set)
-│ ├── data/ # Data layer (models, mock data, etc.)
-│ └── presentation/
-│ └── views/ # Screens (Login, Register)
-│ └── widgets/ # Widgets used in views
+│   └── auth1/             # Auth group 1 (Login/Register UI set)
+│       ├── data/          # Data layer (models, mock data, etc.)
+│       └── presentation/
+│           └── views/     # Screens (Login, Register)
+│               └── widgets/ # Widgets used in views
+```
 
 ---
