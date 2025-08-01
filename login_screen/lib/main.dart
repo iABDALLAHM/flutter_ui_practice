@@ -10,6 +10,10 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Login Screen', home: LoginView());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Login Screen',
+      home: LoginView(),
+    );
   }
 }
