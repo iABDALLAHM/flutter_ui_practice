@@ -55,7 +55,7 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 15),
             SocialLoginSection(),
             const SizedBox(height: 50),
-            SignUpRedirectText(),
+            AuthRichTextRow(text1: "Don’t have an account?", text2: "Sign Up"),
           ],
         ),
       ),

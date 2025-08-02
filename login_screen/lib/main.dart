@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/features/auth/presentation/views/login_view.dart';
+import 'package:login_screen/features/auth/presentation/views/register_view.dart';
 
 void main() {
   runApp(const Login());
@@ -17,7 +18,7 @@ class Login extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Login Screen',
-      home: LoginView(),
+      home: RegisterView(),
     );
   }
 }
