@@ -3,6 +3,7 @@ import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth/presentation/views/widgets/custom_button.dart';
 import 'package:login_screen/features/auth/presentation/views/widgets/custom_text_field.dart';
+import 'package:login_screen/features/auth/presentation/views/widgets/drop_down_section_button.dart';
 import 'package:login_screen/features/auth/presentation/views/widgets/sign_up_redirect_text.dart';
 
 class RegisterViewBody extends StatelessWidget {
@@ -54,19 +55,31 @@ class RegisterViewBody extends StatelessWidget {
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
             const SizedBox(height: 6),
-            CustomTextField(textInputType: TextInputType.number),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 55,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: greyBorder),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(child: DropDownSectionButton()),
+                  ),
+                ),
+                Expanded(
+                  flex: 3,
+                  child: CustomTextField(textInputType: TextInputType.number),
+                ),
+              ],
+            ),
             const SizedBox(height: 16),
             Text(
               "Set Password",
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
             const SizedBox(height: 6),
-            CustomTextField(
-              icon: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.remove_red_eye),
-              ),
-            ),
+            CustomTextField(isPassword: true),
             const SizedBox(height: 16),
             SizedBox(width: double.infinity, height: 50, child: CustomButton()),
             const SizedBox(height: 40),
