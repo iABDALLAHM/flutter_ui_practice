@@ -11,6 +11,10 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(color: Colors.white),
+        scaffoldBackgroundColor: Colors.white,
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Login Screen',
       home: LoginView(),
