@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/features/auth/presentation/views/login_view.dart';
-import 'package:login_screen/features/auth/presentation/views/register_view.dart';
+import 'package:login_screen/core/utliz/app_router.dart';
 
 void main() {
   runApp(const Login());
@@ -11,14 +10,14 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: Colors.white),
         scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      title: 'Login Screen',
-      home: RegisterView(),
+      title: 'Auth Screens',
+      routerConfig: AppRouter.routes,
     );
   }
 }

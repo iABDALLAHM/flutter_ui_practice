@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/constants/constants.dart';
+import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth/presentation/views/widgets/custom_text_field.dart';
@@ -42,9 +43,12 @@ class LoginViewBody extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  "Forgot Password ?",
-                  style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    "Forgot Password ?",
+                    style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+                  ),
                 ),
               ],
             ),
@@ -55,7 +59,12 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(height: 15),
             SocialLoginSection(),
             const SizedBox(height: 50),
-            AuthRichTextRow(text1: "Don’t have an account?", text2: "Sign Up"),
+            AuthRichTextRow(
+              isSignUp: true,
+              text1: "Don’t have an account?",
+              text2: "Sign Up",
+              route: AppRouter.kRegisterView,
+            ),
           ],
         ),
       ),
