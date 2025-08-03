@@ -3,7 +3,7 @@ import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/register_form.dart';
-import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/sign_up_redirect_text.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/sign_up_redirect_text.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
@@ -36,7 +36,7 @@ class RegisterViewBody extends StatelessWidget {
               isSignUp: false,
               text1: "Already have an account?",
               text2: "Login",
-              route: AppRouter.kLoginView,
+              route: AppRouter.kVariant1Login,
             ),
           ],
         ),

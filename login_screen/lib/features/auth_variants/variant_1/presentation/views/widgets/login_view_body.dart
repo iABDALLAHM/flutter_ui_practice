@@ -3,10 +3,10 @@ import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
-import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/custom_text_field.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/custom_button.dart';
-import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/or_divider_section.dart';
-import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/sign_up_redirect_text.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/sign_up_redirect_text.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/social_login_section.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -63,7 +63,7 @@ class LoginViewBody extends StatelessWidget {
               isSignUp: true,
               text1: "Don’t have an account?",
               text2: "Sign Up",
-              route: AppRouter.kRegisterView,
+              route: AppRouter.kVariant1Register,
             ),
           ],
         ),
