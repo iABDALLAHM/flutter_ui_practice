@@ -60,7 +60,6 @@ class Variant1LoginViewBody extends StatelessWidget {
             SocialLoginSection(),
             const SizedBox(height: 50),
             AuthRichTextRow(
-              isSignUp: true,
               text1: "Don’t have an account?",
               text2: "Sign Up",
               route: AppRouter.kVariant1Register,

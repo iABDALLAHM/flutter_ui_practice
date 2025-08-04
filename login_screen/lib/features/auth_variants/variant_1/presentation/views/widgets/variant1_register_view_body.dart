@@ -33,7 +33,6 @@ class Variant1RegisterViewBody extends StatelessWidget {
             RegisterForm(),
             const SizedBox(height: 40),
             AuthRichTextRow(
-              isSignUp: false,
               text1: "Already have an account?",
               text2: "Login",
               route: AppRouter.kVariant1Login,
