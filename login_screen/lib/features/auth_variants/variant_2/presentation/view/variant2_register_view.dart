@@ -6,6 +6,9 @@ class Variant2RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Variant2RegisterViewBody());
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      body: SafeArea(child: Variant2RegisterViewBody()),
+    );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/sign_up_redirect_text.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/auth_rich_text_row.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_login_section.dart';
 import 'package:login_screen/features/auth_variants/variant_2/presentation/view/widgets/variant2_login_auth.dart';
 

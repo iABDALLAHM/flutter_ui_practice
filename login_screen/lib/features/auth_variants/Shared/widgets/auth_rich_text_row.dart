@@ -17,7 +17,7 @@ class AuthRichTextRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(text1, style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(width: 5),
