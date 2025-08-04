@@ -17,7 +17,6 @@ class Login extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Auth Screens',
-
       routerConfig: AppRouter.routes,
     );
   }

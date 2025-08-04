@@ -3,15 +3,27 @@ import 'package:login_screen/features/auth_variants/variant_1/presentation/views
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/variant1_register_view.dart';
 import 'package:login_screen/features/auth_variants/variant_2/presentation/view/variant2_login_view.dart';
 import 'package:login_screen/features/auth_variants/variant_2/presentation/view/variant2_register_view.dart';
+import 'package:login_screen/features/auth_variants/variant_3/presentation/views/variant3_login_view.dart';
+import 'package:login_screen/features/auth_variants/variant_3/presentation/views/variant3_register_view.dart';
 
 class AppRouter {
   static const kVariant1Login = "/variant1-login";
   static const kVariant1Register = "/variant1-register";
   static const kVariant2Login = "/variant2-login";
   static const kVariant2Register = "/variant2-register";
+  static const kVariant3Login = "/variant3-login";
+  static const kVariant3Register = "/variant3-register";
   static GoRouter routes = GoRouter(
-    initialLocation: kVariant2Login,
+    initialLocation: kVariant3Login,
     routes: [
+      GoRoute(
+        path: kVariant3Login,
+        builder: (context, state) => Variant3LoginView(),
+      ),
+      GoRoute(
+        path: kVariant3Register,
+        builder: (context, state) => Variant3RegisterView(),
+      ),
       GoRoute(
         path: kVariant1Login,
         builder: (context, state) => Variant1LoginView(),
