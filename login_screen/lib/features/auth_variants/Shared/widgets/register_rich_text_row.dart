@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/auth_rich_text_row.dart';
 
 class RegisterRichTextRow extends StatelessWidget {
-  const RegisterRichTextRow({super.key});
+  const RegisterRichTextRow({super.key, required this.route});
+  final String  route;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class RegisterRichTextRow extends StatelessWidget {
       child: AuthRichTextRow(
         text1: "Already have an account?",
         text2: "Login",
-        route: AppRouter.kVariant2Login,
+        route: route,
       ),
     );
   }
