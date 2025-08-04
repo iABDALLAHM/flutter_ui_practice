@@ -13,10 +13,11 @@ class Login extends StatelessWidget {
     return MaterialApp.router(
       theme: ThemeData(
         appBarTheme: AppBarTheme(color: Colors.white),
-        scaffoldBackgroundColor: Colors.white,
+        // scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
       title: 'Auth Screens',
+
       routerConfig: AppRouter.routes,
     );
   }

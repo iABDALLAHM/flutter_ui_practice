@@ -6,9 +6,21 @@ class Variant2LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue,
-      body: SafeArea(child: Variant2LoginViewBody()),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.bottomCenter,
+          end: Alignment.topCenter,
+          colors: [
+            Color.fromARGB(255, 0, 225, 255),
+            Color.fromARGB(255, 0, 140, 255),
+          ],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(child: Variant2LoginViewBody()),
+      ),
     );
   }
 }
