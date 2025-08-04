@@ -4,13 +4,14 @@ import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/auth_rich_text_row.dart';
 
 class LoginRichTextRow extends StatelessWidget {
-  const LoginRichTextRow({super.key});
+  const LoginRichTextRow({super.key,required this.route});
+  final String route;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kVariant2Register);
+        GoRouter.of(context).push(route);
       },
       child: AuthRichTextRow(
         text1: "Don’t have an account? ",
