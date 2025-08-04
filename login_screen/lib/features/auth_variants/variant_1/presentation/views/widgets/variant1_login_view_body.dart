@@ -9,8 +9,8 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_se
 import 'package:login_screen/features/auth_variants/Shared/widgets/auth_rich_text_row.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_login_section.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class Variant1LoginViewBody extends StatelessWidget {
+  const Variant1LoginViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
