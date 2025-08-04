@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
-import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/custom_button.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/drop_down_section_button.dart';
 

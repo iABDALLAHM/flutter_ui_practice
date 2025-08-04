@@ -6,6 +6,9 @@ class Variant2LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: LoginViewBody());
+    return Scaffold(
+      backgroundColor: Colors.blue,
+      body: SafeArea(child: Variant2LoginViewBody()),
+    );
   }
 }

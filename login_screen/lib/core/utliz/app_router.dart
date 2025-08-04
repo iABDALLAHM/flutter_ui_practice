@@ -10,6 +10,7 @@ class AppRouter {
   static const kVariant2Login = "/variant2-login";
   static const kVariant2Register = "/variant2-register";
   static GoRouter routes = GoRouter(
+    initialLocation: kVariant2Login,
     routes: [
       GoRoute(
         path: kVariant1Login,
@@ -17,7 +18,7 @@ class AppRouter {
       ),
       GoRoute(
         path: kVariant1Register,
-        builder: (context, state) => Variant2RegisterView(),
+        builder: (context, state) => Variant1RegisterView(),
       ),
       GoRoute(
         path: kVariant2Login,
@@ -25,7 +26,7 @@ class AppRouter {
       ),
       GoRoute(
         path: kVariant2Register,
-        builder: (context, state) => Variant1RegisterView(),
+        builder: (context, state) => Variant2RegisterView(),
       ),
     ],
   );

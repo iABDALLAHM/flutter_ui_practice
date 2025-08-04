@@ -6,6 +6,6 @@ class Variant2RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: RegisterViewBody());
+    return Scaffold(body: Variant2RegisterViewBody());
   }
 }

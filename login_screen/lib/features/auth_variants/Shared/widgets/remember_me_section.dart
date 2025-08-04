@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/core/constants/constants.dart';
+import 'package:login_screen/core/utliz/styles.dart';
 
 class RememberMeSection extends StatefulWidget {
   const RememberMeSection({super.key});
@@ -14,6 +16,7 @@ class _RememberMeSectionState extends State<RememberMeSection> {
     return Row(
       children: [
         Checkbox(
+          activeColor: kPrimaryColor,
           value: isChecked,
           onChanged: (bool? value) {
             setState(() {
@@ -21,7 +24,10 @@ class _RememberMeSectionState extends State<RememberMeSection> {
             });
           },
         ),
-        Text("Remember me"),
+        Text(
+          "Remember me",
+          style: Styles.textStyle12.copyWith(color: grayText),
+        ),
       ],
     );
   }

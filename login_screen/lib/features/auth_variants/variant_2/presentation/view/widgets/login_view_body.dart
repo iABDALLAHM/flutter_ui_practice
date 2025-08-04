@@ -1,46 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/core/constants/constants.dart';
+import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/remember_me_section.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/sign_up_redirect_text.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/social_login_section.dart';
+import 'package:login_screen/features/auth_variants/variant_2/presentation/view/widgets/variant2_login_auth.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class Variant2LoginViewBody extends StatelessWidget {
+  const Variant2LoginViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: Colors.white),
-      child: Column(
-        children: [
-          Text("Login"),
-          AuthRichTextRow(
-            text1: "text1",
-            text2: "text2",
-            route: "route",
-            isSignUp: true,
-          ),
-          const SizedBox(height: 10),
-          Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
-          CustomTextField(),
-          const SizedBox(height: 20),
-          Text("Password", style: Styles.textStyle12.copyWith(color: grayText)),
-          CustomTextField(isPassword: true),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              RememberMeSection(),
-              GestureDetector(
-                onTap: () {},
-                child: Text(
-                  "Forgot Password ?",
-                  style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                ),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 24),
+                    Text("Login", style: Styles.textStyle34),
+                    const SizedBox(height: 12),
+                    AuthRichTextRow(
+                      text1: "Don’t have an account? ",
+                      text2: "Sign Up",
+                      route: AppRouter.kVariant2Register,
+                      isSignUp: true,
+                    ),
+                    const SizedBox(height: 24),
+                    const SizedBox(height: 10),
+                    Variant2LoginAuth(),
+                    const SizedBox(height: 30),
+                    OrDividerSection(),
+                    const SizedBox(height: 24),
+                    SocialLoginSection(),
+                    const SizedBox(height: 24),
+                  ],
                 ),
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
