@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/utliz/assets.dart';
-import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/social_button.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/social_button.dart';
 
 class SocialLoginSection extends StatelessWidget {
   const SocialLoginSection({super.key});
