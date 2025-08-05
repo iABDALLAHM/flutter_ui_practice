@@ -16,6 +16,7 @@ class Variant3RegisterViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         IconButton(
           onPressed: () {
@@ -24,18 +25,21 @@ class Variant3RegisterViewBody extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
         ),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               "Sign Up",
               style: Styles.textStyle34.copyWith(color: Colors.white),
             ),
-            RegisterRichTextRow(route: AppRouter.kVariant3Login),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [RegisterRichTextRow(route: AppRouter.kVariant3Login)],
+            ),
           ],
         ),
+        const SizedBox(height: 15),
         Container(
           padding: AppPadding.horizontalPadding20,
-          margin: EdgeInsets.symmetric(horizontal: 10),
+          margin: EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
@@ -63,7 +67,7 @@ class Variant3RegisterViewBody extends StatelessWidget {
               Row(
                 children: [
                   Expanded(child: DropDownSectionButton()),
-                  Expanded(flex: 3, child: CustomTextField()),
+                  Expanded(flex: 2, child: CustomTextField()),
                 ],
               ),
               const SizedBox(height: 16),

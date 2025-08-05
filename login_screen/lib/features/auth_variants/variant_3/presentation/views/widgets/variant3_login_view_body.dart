@@ -78,7 +78,9 @@ class Variant3LoginViewBody extends StatelessWidget {
                 const SizedBox(height: 24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [LoginRichTextRow(route: AppRouter.kVariant3Register,)],
+                  children: [
+                    LoginRichTextRow(route: AppRouter.kVariant3Register),
+                  ],
                 ),
                 const SizedBox(height: 24),
               ],
