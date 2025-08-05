@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/app_padding.dart';
-import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/login_rich_text_row.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/remember_me_section.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_button.dart';
 import 'package:login_screen/features/auth_variants/variant_3/presentation/views/widgets/or_divider_variant3.dart';
@@ -76,12 +74,6 @@ class Variant3LoginViewBody extends StatelessWidget {
                   child: CustomButton(),
                 ),
                 const SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    LoginRichTextRow(route: AppRouter.kVariant3Register),
-                  ],
-                ),
                 const SizedBox(height: 24),
               ],
             ),

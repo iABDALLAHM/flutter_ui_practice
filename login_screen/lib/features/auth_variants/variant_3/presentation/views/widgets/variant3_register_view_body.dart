@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/utliz/app_padding.dart';
-import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/drop_down_section_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/register_rich_text_row.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_button.dart';
 
 class Variant3RegisterViewBody extends StatelessWidget {
@@ -29,10 +27,6 @@ class Variant3RegisterViewBody extends StatelessWidget {
             Text(
               "Sign Up",
               style: Styles.textStyle34.copyWith(color: Colors.white),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [RegisterRichTextRow(route: AppRouter.kVariant3Login)],
             ),
           ],
         ),

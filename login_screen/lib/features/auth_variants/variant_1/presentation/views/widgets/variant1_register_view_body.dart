@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/constants/constants.dart';
-import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/register_form.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/auth_rich_text_row.dart';
 
 class Variant1RegisterViewBody extends StatelessWidget {
   const Variant1RegisterViewBody({super.key});
@@ -32,11 +30,7 @@ class Variant1RegisterViewBody extends StatelessWidget {
             const SizedBox(height: 33),
             RegisterForm(),
             const SizedBox(height: 40),
-            AuthRichTextRow(
-              text1: "Already have an account?",
-              text2: "Login",
-              route: AppRouter.kVariant1Login,
-            ),
+
           ],
         ),
       ),

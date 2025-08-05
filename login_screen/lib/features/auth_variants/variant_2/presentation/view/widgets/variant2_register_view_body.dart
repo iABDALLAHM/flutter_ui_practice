@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/register_rich_text_row.dart';
 import 'package:login_screen/features/auth_variants/variant_2/presentation/view/widgets/variant2_register_auth.dart';
 
 class Variant2RegisterViewBody extends StatelessWidget {
@@ -29,7 +27,6 @@ class Variant2RegisterViewBody extends StatelessWidget {
                   icon: Icon(Icons.arrow_back),
                 ),
                 Text("Sign up", style: Styles.textStyle34),
-                RegisterRichTextRow(route:AppRouter.kVariant2Login ,),
                 const SizedBox(height: 24),
                 Variant2RegisterAuth(),
                 const SizedBox(height: 24),
