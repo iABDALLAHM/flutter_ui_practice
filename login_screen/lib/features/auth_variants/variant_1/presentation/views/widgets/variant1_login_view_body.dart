@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/constants/constants.dart';
-import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_login_section.dart';
+import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/variant1_login_rich_text.dart';
 
 class Variant1LoginViewBody extends StatelessWidget {
   const Variant1LoginViewBody({super.key});
@@ -57,8 +57,8 @@ class Variant1LoginViewBody extends StatelessWidget {
             OrDividerSection(),
             const SizedBox(height: 15),
             SocialLoginSection(),
-            const SizedBox(height: 50),
-
+            const SizedBox(height: 10),
+            Variant1LoginRichText(),
           ],
         ),
       ),
