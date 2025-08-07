@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/register_form.dart';
+import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/variant1_register_rich_text.dart';
 
 class Variant1RegisterViewBody extends StatelessWidget {
   const Variant1RegisterViewBody({super.key});
@@ -30,7 +31,7 @@ class Variant1RegisterViewBody extends StatelessWidget {
             const SizedBox(height: 33),
             RegisterForm(),
             const SizedBox(height: 40),
-
+            Variant1RegisterRichText(),
           ],
         ),
       ),
