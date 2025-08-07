@@ -4,8 +4,8 @@ import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 
-class Variant4AuthRichText extends StatelessWidget {
-  const Variant4AuthRichText({super.key});
+class Variant4LoginRichText extends StatelessWidget {
+  const Variant4LoginRichText({super.key});
 
   @override
   Widget build(BuildContext context) {

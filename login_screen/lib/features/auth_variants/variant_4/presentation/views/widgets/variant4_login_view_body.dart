@@ -5,7 +5,7 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/or_divider_variant4.dart';
 import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/terms_and_policy_text.dart';
-import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_auth_rich_text.dart';
+import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_login_rich_text.dart';
 import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_remeber_me_section.dart';
 import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_social_auth.dart';
 
@@ -26,7 +26,7 @@ class Variant4LoginViewBody extends StatelessWidget {
               "Sign in to your \nAccount",
               style: Styles.textStyle34.copyWith(color: Colors.white),
             ),
-            Variant4AuthRichText(),
+            Variant4LoginRichText(),
             const SizedBox(height: 80),
             Text("Email"),
             const SizedBox(height: 3),
