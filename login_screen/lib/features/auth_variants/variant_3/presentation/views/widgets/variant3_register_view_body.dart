@@ -7,6 +7,7 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_f
 import 'package:login_screen/features/auth_variants/Shared/widgets/drop_down_section_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_button.dart';
+import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_register_rich_text.dart';
 
 class Variant3RegisterViewBody extends StatelessWidget {
   const Variant3RegisterViewBody({super.key});
@@ -28,6 +29,7 @@ class Variant3RegisterViewBody extends StatelessWidget {
               "Sign Up",
               style: Styles.textStyle34.copyWith(color: Colors.white),
             ),
+            Variant4RegisterRichText(),
           ],
         ),
         const SizedBox(height: 15),
