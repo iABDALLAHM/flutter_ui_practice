@@ -8,6 +8,7 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_f
 import 'package:login_screen/features/auth_variants/Shared/widgets/remember_me_section.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_button.dart';
 import 'package:login_screen/features/auth_variants/variant_3/presentation/views/widgets/or_divider_variant3.dart';
+import 'package:login_screen/features/auth_variants/variant_3/presentation/views/widgets/variant3_login_rich_text.dart';
 
 class Variant3LoginViewBody extends StatelessWidget {
   const Variant3LoginViewBody({super.key});
@@ -74,6 +75,7 @@ class Variant3LoginViewBody extends StatelessWidget {
                   child: CustomButton(),
                 ),
                 const SizedBox(height: 24),
+                Variant3LoginRichText(),
                 const SizedBox(height: 24),
               ],
             ),
