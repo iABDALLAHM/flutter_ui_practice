@@ -21,7 +21,7 @@ class AppRouter {
     initialLocation: kVariant2Login,
     routes: [
       GoRoute(
-        path: kVariant2Login,
+        path: kVariant1Login,
         builder: (context, state) => Variant1LoginView(),
       ),
       GoRoute(
