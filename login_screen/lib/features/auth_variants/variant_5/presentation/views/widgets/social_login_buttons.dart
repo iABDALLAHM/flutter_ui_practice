@@ -16,17 +16,17 @@ class SocialLoginButtons extends StatelessWidget {
         ),
         const SizedBox(width: 15),
         SocialIconButton(
-          image: Image(image: AssetImage(AssetData.googleSocialIcon)),
+          image: Image(image: AssetImage(AssetData.facebookSocialIcon)),
           onPressed: () {},
         ),
         const SizedBox(width: 15),
         SocialIconButton(
-          image: Image(image: AssetImage(AssetData.googleSocialIcon)),
+          image: Image(image: AssetImage(AssetData.appleIcon)),
           onPressed: () {},
         ),
         const SizedBox(width: 15),
         SocialIconButton(
-          image: Image(image: AssetImage(AssetData.googleSocialIcon)),
+          image: Image(image: AssetImage(AssetData.phoneMessageIcon)),
           onPressed: () {},
         ),
       ],

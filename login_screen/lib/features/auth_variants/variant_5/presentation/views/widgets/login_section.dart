@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/core/constants/constants.dart';
+import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/remember_me_section.dart';
@@ -13,11 +15,13 @@ class SignUpSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Email"),
+        Text("Email",
+                  style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 4),
         CustomTextField(),
         const SizedBox(height: 17),
-        Text("Password"),
+        Text("Password",
+                  style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 4),
         CustomTextField(isPassword: true),
         const SizedBox(height: 17),
