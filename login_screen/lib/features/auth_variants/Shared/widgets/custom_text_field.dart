@@ -3,6 +3,7 @@ import 'package:login_screen/core/constants/constants.dart';
 
 class CustomTextField extends StatefulWidget {
   const CustomTextField({
+    this.preIcon,
     super.key,
     this.textInputType = TextInputType.text,
     this.icon,
@@ -10,6 +11,7 @@ class CustomTextField extends StatefulWidget {
   });
   final TextInputType textInputType;
   final IconButton? icon;
+  final IconButton? preIcon;
   final bool isPassword;
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -33,6 +35,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               )
             : widget.icon,
         focusedBorder: _buildBorder(),
+        prefixIcon: widget.preIcon,
         enabledBorder: _buildBorder(),
       ),
     );
