@@ -8,6 +8,7 @@ class SocialLoginButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SocialIconButton(
           image: Image(image: AssetImage(AssetData.googleSocialIcon)),
@@ -32,4 +33,3 @@ class SocialLoginButtons extends StatelessWidget {
     );
   }
 }
-
