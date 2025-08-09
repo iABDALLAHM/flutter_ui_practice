@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:login_screen/core/constants/constants.dart';
+import 'package:login_screen/core/utliz/app_router.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
@@ -34,7 +36,11 @@ class Variant6LoginViewBody extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(
+                          context,
+                        ).push(AppRouter.kVariant6RegisterView);
+                      },
                       child: Text(
                         "Sign Up",
                         style: Styles.textStyle12.copyWith(
