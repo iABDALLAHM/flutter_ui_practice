@@ -5,7 +5,11 @@ class Variant1LoginView extends StatelessWidget {
   const Variant1LoginView({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: _buildAppBar(), body: Variant1LoginViewBody());
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: _buildAppBar(),
+      body: Variant1LoginViewBody(),
+    );
   }
 
   AppBar _buildAppBar() {

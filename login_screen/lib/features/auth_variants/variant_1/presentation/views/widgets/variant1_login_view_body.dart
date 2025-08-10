@@ -6,6 +6,7 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_f
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/or_divider_section.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_login_section.dart';
+import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/forget_password_section.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/variant1_login_rich_text.dart';
 
 class Variant1LoginViewBody extends StatelessWidget {
@@ -13,51 +14,41 @@ class Variant1LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 24),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image(image: AssetImage(AssetData.appLogo)),
             const SizedBox(height: 32),
-            Text("Sign in to your\n Account", style: Styles.textStyle34),
+            Text("Sign in to your", style: Styles.textStyle34),
+            Text("Account", style: Styles.textStyle34),
             const SizedBox(height: 12),
             Text(
               "Enter your email and password to log in",
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 33),
             Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
             const SizedBox(height: 4),
-            CustomTextField(),
-            const SizedBox(height: 16),
+            CustomTextField(hintText: "Loisbecket@gmail.com"),
+            const SizedBox(height: 17),
             Text(
               "Password",
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
             const SizedBox(height: 4),
-            CustomTextField(),
+            CustomTextField(isPassword: true, hintText: "**********"),
             const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                GestureDetector(
-                  onTap: () {},
-                  child: Text(
-                    "Forgot Password ?",
-                    style: Styles.textStyle12.copyWith(color: kPrimaryColor),
-                  ),
-                ),
-              ],
-            ),
+            ForgetPasswordSection(),
             const SizedBox(height: 24),
             SizedBox(width: double.infinity, height: 50, child: CustomButton()),
             const SizedBox(height: 24),
             OrDividerSection(),
             const SizedBox(height: 15),
             SocialLoginSection(),
-            const SizedBox(height: 10),
+            const SizedBox(height: 54),
             Variant1LoginRichText(),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/variant_1/presentation/views/widgets/register_form.dart';
@@ -15,13 +16,13 @@ class Variant1RegisterViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 70),
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
+            GestureDetector(
+              onTap: () {
+                GoRouter.of(context).pop();
               },
-              icon: Icon(Icons.arrow_back),
+              child: Icon(Icons.arrow_back, size: 20),
             ),
+            const SizedBox(height: 22),
             Text("Sign up", style: Styles.textStyle34),
             const SizedBox(height: 12),
             Text(
@@ -29,7 +30,7 @@ class Variant1RegisterViewBody extends StatelessWidget {
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
             const SizedBox(height: 33),
-            RegisterForm(),
+            Variant1RegisterForm(),
             const SizedBox(height: 40),
             Variant1RegisterRichText(),
           ],

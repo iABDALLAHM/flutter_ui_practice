@@ -5,8 +5,8 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/drop_down_section_button.dart';
 
-class RegisterForm extends StatelessWidget {
-  const RegisterForm({super.key});
+class Variant1RegisterForm extends StatelessWidget {
+  const Variant1RegisterForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,11 @@ class RegisterForm extends StatelessWidget {
       children: [
         Text("Full Name", style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 6),
-        CustomTextField(),
+        CustomTextField(hintText: "Lois Becket"),
         const SizedBox(height: 16),
         Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 6),
-        CustomTextField(),
+        CustomTextField(hintText: "Loisbecket@gmail.com"),
         const SizedBox(height: 16),
         Text(
           "Birth of date",
@@ -27,6 +27,7 @@ class RegisterForm extends StatelessWidget {
         ),
         const SizedBox(height: 6),
         CustomTextField(
+          hintText: "18/03/2024",
           textInputType: TextInputType.datetime,
           icon: IconButton(
             onPressed: () {},
@@ -53,7 +54,10 @@ class RegisterForm extends StatelessWidget {
             ),
             Expanded(
               flex: 3,
-              child: CustomTextField(textInputType: TextInputType.number),
+              child: CustomTextField(
+                textInputType: TextInputType.number,
+                hintText: "(454) 726-0592",
+              ),
             ),
           ],
         ),
@@ -63,7 +67,7 @@ class RegisterForm extends StatelessWidget {
           style: Styles.textStyle12.copyWith(color: grayText),
         ),
         const SizedBox(height: 6),
-        CustomTextField(isPassword: true),
+        CustomTextField(isPassword: true, hintText: "***********"),
         const SizedBox(height: 16),
         SizedBox(width: double.infinity, height: 50, child: CustomButton()),
       ],
