@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 
 class Variant4RegisterRichText extends StatelessWidget {
@@ -8,7 +9,7 @@ class Variant4RegisterRichText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
           "Already have an account?",
@@ -21,9 +22,9 @@ class Variant4RegisterRichText extends StatelessWidget {
           child: Text(
             "Log In",
             style: TextStyle(
-              color: Colors.white,
+              color: kPrimaryColor,
               decoration: TextDecoration.underline,
-              decorationColor: Colors.white,
+              decorationColor: kPrimaryColor,
               decorationThickness: 1.5,
               decorationStyle: TextDecorationStyle.solid,
             ),

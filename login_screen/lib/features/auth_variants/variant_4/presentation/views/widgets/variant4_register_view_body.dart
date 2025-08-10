@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
@@ -16,27 +17,32 @@ class Variant4RegisterViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            IconButton(
-              onPressed: () {
+            GestureDetector(
+              onTap: () {
                 GoRouter.of(context).pop();
               },
-              icon: Icon(Icons.arrow_back),
+              child: Icon(Icons.arrow_back, color: Colors.white),
             ),
+            const SizedBox(height: 24),
             Text(
               "Register",
               style: Styles.textStyle34.copyWith(color: Colors.white),
             ),
+            const SizedBox(height: 12),
             Variant4RegisterRichText(),
-            const SizedBox(height: 60),
+            const SizedBox(height: 50),
             Row(
               children: [
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("First Name"),
+                      Text(
+                        "First Name",
+                        style: Styles.textStyle12.copyWith(color: grayText),
+                      ),
                       const SizedBox(height: 4),
-                      CustomTextField(),
+                      CustomTextField(hintText: "Lois"),
                     ],
                   ),
                 ),
@@ -45,35 +51,48 @@ class Variant4RegisterViewBody extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Last Name"),
+                      Text(
+                        "Last Name",
+                        style: Styles.textStyle12.copyWith(color: grayText),
+                      ),
                       const SizedBox(height: 4),
-                      CustomTextField(),
+                      CustomTextField(hintText: "Becket"),
                     ],
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 20),
-            Text("Email"),
+            Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
             const SizedBox(height: 4),
-            CustomTextField(),
+            CustomTextField(hintText: "Loisbecket@gmail.com"),
             const SizedBox(height: 20),
-            Text("Birth of date"),
+            Text(
+              "Birth of date",
+              style: Styles.textStyle12.copyWith(color: grayText),
+            ),
             const SizedBox(height: 4),
             CustomTextField(
+              hintText: "18/03/2024",
               icon: IconButton(
                 icon: Icon(Icons.calendar_month_outlined),
                 onPressed: () {},
               ),
             ),
             const SizedBox(height: 20),
-            Text("Phone Number"),
+            Text(
+              "Phone Number",
+              style: Styles.textStyle12.copyWith(color: grayText),
+            ),
             const SizedBox(height: 4),
-            CustomTextField(),
+            CustomTextField(hintText: "(454) 726-0592"),
             const SizedBox(height: 20),
-            Text("Set Password"),
+            Text(
+              "Set Password",
+              style: Styles.textStyle12.copyWith(color: grayText),
+            ),
             const SizedBox(height: 4),
-            CustomTextField(isPassword: true),
+            CustomTextField(isPassword: true, hintText: "*******"),
             const SizedBox(height: 32),
             SizedBox(height: 50, width: double.infinity, child: CustomButton()),
           ],

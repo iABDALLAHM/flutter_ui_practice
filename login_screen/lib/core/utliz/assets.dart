@@ -7,4 +7,5 @@ class AssetData {
   static const blueAppIcon = "assets/images/blueAppIcon.png";
   static const appleIcon = "assets/images/appleIcon.png";
   static const phoneMessageIcon = "assets/images/phoneMessageIcon.png";
+  static const blueLightLogo = "assets/images/blueLightLogo.png";
 }

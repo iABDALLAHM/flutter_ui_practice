@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
@@ -21,20 +22,24 @@ class Variant4LoginViewBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-            Image(image: AssetImage(AssetData.whiteEditionLogo)),
+            Image(image: AssetImage(AssetData.blueLightLogo)),
+            const SizedBox(height: 32),
             Text(
               "Sign in to your \nAccount",
               style: Styles.textStyle34.copyWith(color: Colors.white),
             ),
             Variant4LoginRichText(),
-            const SizedBox(height: 80),
-            Text("Email"),
+            const SizedBox(height: 40),
+            Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
             const SizedBox(height: 3),
-            CustomTextField(),
+            CustomTextField(hintText: "Loisbecket@gmail.com"),
             const SizedBox(height: 17),
-            Text("Password"),
+            Text(
+              "Password",
+              style: Styles.textStyle12.copyWith(color: grayText),
+            ),
             const SizedBox(height: 3),
-            CustomTextField(isPassword: true),
+            CustomTextField(isPassword: true, hintText: "*******"),
             const SizedBox(height: 17),
             Variant4RemeberMeSection(),
             const SizedBox(height: 30),
@@ -44,7 +49,7 @@ class Variant4LoginViewBody extends StatelessWidget {
             const SizedBox(height: 16),
             Variant4SocialAuth(),
             const SizedBox(height: 64),
-            TermsAndPolicyText(),
+            Align(child: TermsAndPolicyText()),
           ],
         ),
       ),
