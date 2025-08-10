@@ -23,8 +23,14 @@ class Variant6LoginViewBody extends StatelessWidget {
               children: [
                 Image(image: AssetImage(AssetData.blueAppIcon)),
                 const SizedBox(height: 16),
-                Text("Sign in to your", style: Styles.textStyle34),
-                Text("Account", style: Styles.textStyle34),
+                Text(
+                  "Sign in to your",
+                  style: Styles.textStyle34.copyWith(color: Colors.white),
+                ),
+                Text(
+                  "Account",
+                  style: Styles.textStyle34.copyWith(color: Colors.white),
+                ),
                 const SizedBox(height: 12),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -33,6 +39,7 @@ class Variant6LoginViewBody extends StatelessWidget {
                       "Don’t have an account?",
                       style: Styles.textStyle12.copyWith(
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                     TextButton(
@@ -61,12 +68,14 @@ class Variant6LoginViewBody extends StatelessWidget {
                   child: Column(
                     children: [
                       CustomTextField(
+                        hintText: "Loisbecket@gmail.com",
                         preIcon: IconButton(
                           onPressed: () {},
                           icon: Icon(Icons.mail_outline, color: kPrimaryColor),
                         ),
                       ),
                       CustomTextField(
+                        hintText: "*******",
                         isPassword: true,
                         preIcon: IconButton(
                           onPressed: () {},
@@ -80,7 +89,7 @@ class Variant6LoginViewBody extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    "Forget Password?",
+                    "Forgot Your Password ?",
                     style: TextStyle(
                       decoration: TextDecoration.underline,
                       decorationStyle: TextDecorationStyle.solid,

@@ -6,9 +6,22 @@ class Variant6LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 110, 125, 151),
-      body: SafeArea(child: Variant6LoginViewBody()),
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          stops: [0.0, 0.1],
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            const Color.fromARGB(255, 109, 107, 107),
+            const Color.fromARGB(255, 21, 21, 21),
+          ],
+        ),
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(child: Variant6LoginViewBody()),
+      ),
     );
   }
 }
