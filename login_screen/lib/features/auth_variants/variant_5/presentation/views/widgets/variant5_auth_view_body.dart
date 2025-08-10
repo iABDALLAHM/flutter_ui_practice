@@ -48,7 +48,7 @@ class _Variant5LoginViewBodyState extends State<Variant5AuthViewBody> {
               },
             ),
             const SizedBox(height: 25),
-            isLoginSelected ? SignUpSection() : LoginSection(),
+            isLoginSelected ? LoginSection() : RegisterSection(),
           ],
         ),
       ),

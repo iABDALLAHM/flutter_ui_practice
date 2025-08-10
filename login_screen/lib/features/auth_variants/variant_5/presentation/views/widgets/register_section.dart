@@ -5,8 +5,8 @@ import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/drop_down_section_button.dart';
 
-class LoginSection extends StatelessWidget {
-  const LoginSection({super.key});
+class RegisterSection extends StatelessWidget {
+  const RegisterSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class LoginSection extends StatelessWidget {
                     "First Name",
                     style: Styles.textStyle12.copyWith(color: grayText),
                   ),
-                  CustomTextField(),
+                  CustomTextField(hintText: "Lois"),
                 ],
               ),
             ),
@@ -36,17 +36,16 @@ class LoginSection extends StatelessWidget {
                     "Last Name",
                     style: Styles.textStyle12.copyWith(color: grayText),
                   ),
-                  CustomTextField(),
+                  CustomTextField(hintText: "Becket"),
                 ],
               ),
             ),
           ],
         ),
-
         const SizedBox(height: 17),
         Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 2),
-        CustomTextField(),
+        CustomTextField(hintText: "Loisbecket@gmail.com"),
         const SizedBox(height: 17),
         Text(
           "Birth of date",
@@ -54,6 +53,7 @@ class LoginSection extends StatelessWidget {
         ),
         const SizedBox(height: 2),
         CustomTextField(
+          hintText: "18/03/2024",
           icon: IconButton(onPressed: () {}, icon: Icon(Icons.calendar_month)),
         ),
         const SizedBox(height: 17),
@@ -65,7 +65,10 @@ class LoginSection extends StatelessWidget {
         Row(
           children: [
             Expanded(child: DropDownSectionButton()),
-            Expanded(flex: 3, child: CustomTextField()),
+            Expanded(
+              flex: 3,
+              child: CustomTextField(hintText: "(454) 726-0592"),
+            ),
           ],
         ),
         const SizedBox(height: 17),
@@ -74,10 +77,10 @@ class LoginSection extends StatelessWidget {
           style: Styles.textStyle12.copyWith(color: grayText),
         ),
         const SizedBox(height: 2),
-        CustomTextField(isPassword: true),
+        CustomTextField(isPassword: true, hintText: "*******"),
         const SizedBox(height: 24),
         const SizedBox(
-          height: 50,
+          height: 40,
           width: double.infinity,
           child: CustomButton(),
         ),

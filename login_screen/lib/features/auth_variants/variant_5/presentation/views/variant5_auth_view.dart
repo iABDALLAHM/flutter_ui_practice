@@ -12,4 +12,6 @@ class Variant5AuthView extends StatelessWidget {
       body: SafeArea(child: Variant5AuthViewBody()),
     );
   }
+
+  
 }
