@@ -35,51 +35,54 @@ class Variant3LoginViewBody extends StatelessWidget {
             style: Styles.textStyle12.copyWith(color: Colors.white),
           ),
           const SizedBox(height: 24),
-          Container(
-            margin: AppPadding.horizontalPadding20,
-            padding: AppPadding.horizontalPadding20,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(height: 24),
-                SocialButton(
-                  text: "Continue with google",
-                  icon: AssetData.googleSocialIcon,
-                ),
-                const SizedBox(height: 24),
-                OrDividerVariant3(),
-                const SizedBox(height: 24),
-                CustomTextField(),
-                const SizedBox(height: 16),
-                CustomTextField(isPassword: true),
-                const SizedBox(height: 17),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    RememberMeSection(),
-                    Text(
-                      "Forgot Password ?",
-                      style: Styles.textStyle12.copyWith(color: kPrimaryColor),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 24),
-                SizedBox(
-                  width: double.infinity,
-                  height: 50,
-                  child: CustomButton(),
-                ),
-                const SizedBox(height: 24),
-                Variant3LoginRichText(),
-                const SizedBox(height: 24),
-              ],
-            ),
+          LoginCard(),
+        ],
+      ),
+    );
+  }
+}
+
+class LoginCard extends StatelessWidget {
+  const LoginCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: AppPadding.horizontalPadding20,
+      padding: AppPadding.horizontalPadding20,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Column(
+        children: [
+          const SizedBox(height: 24),
+          SocialButton(
+            text: "Continue with google",
+            icon: AssetData.googleSocialIcon,
           ),
+          const SizedBox(height: 24),
+          OrDividerVariant3(),
+          const SizedBox(height: 24),
+          CustomTextField(hintText: "Loisbecket@gmail.com"),
+          const SizedBox(height: 16),
+          CustomTextField(isPassword: true, hintText: "*********"),
+          const SizedBox(height: 17),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              RememberMeSection(),
+              Text(
+                "Forgot Password ?",
+                style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+              ),
+            ],
+          ),
+          const SizedBox(height: 24),
+          SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+          const SizedBox(height: 14),
+          Variant3LoginRichText(),
+          const SizedBox(height: 14),
         ],
       ),
     );

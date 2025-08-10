@@ -12,7 +12,7 @@ class Variant3LoginView extends StatelessWidget {
           stops: [0.5, 0.5],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Colors.blue, const Color.fromARGB(213, 255, 255, 255)],
+          colors: [Color(0xff1D61E7), const Color.fromARGB(232, 255, 255, 255)],
         ),
       ),
       child: Scaffold(
