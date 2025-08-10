@@ -9,6 +9,7 @@ class Variant2LoginView extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
+          stops: [0.2, 0.9],
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
           colors: [

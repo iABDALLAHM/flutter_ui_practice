@@ -15,11 +15,11 @@ class Variant2RegisterAuth extends StatelessWidget {
       children: [
         Text("Full Name", style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 4),
-        CustomTextField(),
+        CustomTextField(hintText: "Lois Becket"),
         const SizedBox(height: 17),
         Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
         const SizedBox(height: 4),
-        CustomTextField(),
+        CustomTextField(hintText: "Loisbecket@gmail.com"),
         const SizedBox(height: 17),
         Text(
           "Birth of date",
@@ -27,13 +27,13 @@ class Variant2RegisterAuth extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         CustomTextField(
+          hintText: "18/03/2024",
           textInputType: TextInputType.datetime,
           icon: IconButton(
             onPressed: () {},
             icon: Icon(Icons.calendar_month_outlined),
           ),
         ),
-
         const SizedBox(height: 17),
         Text(
           "Phone Number",
@@ -45,7 +45,10 @@ class Variant2RegisterAuth extends StatelessWidget {
             Expanded(child: DropDownSectionButton()),
             Expanded(
               flex: 3,
-              child: CustomTextField(textInputType: TextInputType.number),
+              child: CustomTextField(
+                textInputType: TextInputType.number,
+                hintText: "(454) 726-0592",
+              ),
             ),
           ],
         ),
@@ -55,7 +58,7 @@ class Variant2RegisterAuth extends StatelessWidget {
           style: Styles.textStyle12.copyWith(color: grayText),
         ),
         const SizedBox(height: 4),
-        CustomTextField(isPassword: true),
+        CustomTextField(isPassword: true, hintText: "**********"),
         const SizedBox(height: 17),
         SizedBox(width: double.infinity, height: 50, child: CustomButton()),
       ],
