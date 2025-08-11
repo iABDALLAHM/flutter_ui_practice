@@ -21,12 +21,20 @@ class Variant7LoginViewBody extends StatelessWidget {
           children: [
             Image(image: AssetImage(AssetData.blueAppIcon)),
             const SizedBox(height: 32),
-            Text("Sign in to your", style: Styles.textStyle34),
-            Text("Account", style: Styles.textStyle34),
-            const SizedBox(height: 12),
-            Text(
-              "Enter your email and password to log in",
-              style: Styles.textStyle12.copyWith(color: grayText),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Sign in to your", style: Styles.textStyle34),
+                  Text("Account", style: Styles.textStyle34),
+                  const SizedBox(height: 12),
+                  Text(
+                    "Enter your email and password to log in",
+                    style: Styles.textStyle12.copyWith(color: grayText),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 32),
             CustomTextField(hintText: "Loisbecket@gmail.com"),
