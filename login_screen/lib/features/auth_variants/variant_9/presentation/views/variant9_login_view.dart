@@ -9,9 +9,12 @@ class Variant9LoginView extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [Colors.blue, Colors.white],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            const Color.fromARGB(255, 255, 248, 168),
+            const Color.fromARGB(255, 242, 167, 255),
+          ],
         ),
       ),
       child: const Scaffold(

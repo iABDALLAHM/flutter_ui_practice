@@ -5,8 +5,8 @@ import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/remember_me_section.dart';
-import 'package:login_screen/features/auth_variants/Shared/widgets/social_login_section.dart';
 import 'package:login_screen/features/auth_variants/variant_9/presentation/views/widgets/or_divider_variant9.dart';
+import 'package:login_screen/features/auth_variants/variant_9/presentation/views/widgets/social_login_section.dart';
 import 'package:login_screen/features/auth_variants/variant_9/presentation/views/widgets/variant9_login_rich_text.dart';
 
 class Variant9LoginCard extends StatelessWidget {
