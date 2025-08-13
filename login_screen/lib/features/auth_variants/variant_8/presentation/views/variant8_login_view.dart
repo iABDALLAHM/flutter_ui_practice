@@ -6,6 +6,23 @@ class Variant8LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Variant8LoginViewBody());
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.topRight,
+          stops: [0.0, 0.2, 0.3],
+          colors: [
+            Colors.blueAccent,
+            Colors.blue,
+            const Color.fromARGB(255, 187, 0, 255),
+          ],
+        ),
+      ),
+      child: const Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(child: Variant8LoginViewBody()),
+      ),
+    );
   }
 }

@@ -6,8 +6,12 @@ class Variant8RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Variant8RegisterViewBody(),
+    return Container(
+      decoration: BoxDecoration(color: Colors.blue),
+      child: const Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(child: Variant8RegisterViewBody()),
+      ),
     );
   }
 }
