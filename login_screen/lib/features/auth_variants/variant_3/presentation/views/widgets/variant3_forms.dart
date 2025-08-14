@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/drop_down_section_button.dart';
@@ -24,7 +25,7 @@ class Variant3Forms extends StatelessWidget {
           hintText: "18/03/2024",
           icon: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.calendar_month_outlined),
+            icon: Icon(FontAwesomeIcons.calendar),
           ),
         ),
         const SizedBox(height: 16),
@@ -43,7 +44,7 @@ class Variant3Forms extends StatelessWidget {
         const SizedBox(
           width: double.infinity,
           height: 50,
-          child: CustomButton(),
+          child: CustomButton(text: "Register"),
         ),
       ],
     );

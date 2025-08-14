@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:login_screen/core/constants/constants.dart';
 
 class Variant3RegisterRichText extends StatelessWidget {
   const Variant3RegisterRichText({super.key});
@@ -10,7 +9,7 @@ class Variant3RegisterRichText extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("Already have an account?"),
+        Text("Already have an account?", style: TextStyle(color: Colors.white)),
         TextButton(
           onPressed: () {
             GoRouter.of(context).pop();
@@ -18,10 +17,10 @@ class Variant3RegisterRichText extends StatelessWidget {
           child: Text(
             "Log In",
             style: TextStyle(
-              color: kPrimaryColor,
+              color: Colors.white,
               decoration: TextDecoration.underline,
               decorationThickness: 1,
-              decorationColor: kPrimaryColor,
+              decorationColor: Colors.white,
               decorationStyle: TextDecorationStyle.solid,
             ),
           ),

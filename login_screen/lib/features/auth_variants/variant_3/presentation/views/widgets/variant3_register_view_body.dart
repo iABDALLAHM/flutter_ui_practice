@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/variant_3/presentation/views/widgets/register_card.dart';
-import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_register_rich_text.dart';
+import 'package:login_screen/features/auth_variants/variant_3/presentation/views/widgets/variant3_register_rich_text.dart';
 
 class Variant3RegisterViewBody extends StatelessWidget {
   const Variant3RegisterViewBody({super.key});
@@ -21,7 +22,10 @@ class Variant3RegisterViewBody extends StatelessWidget {
                   onTap: () {
                     GoRouter.of(context).pop();
                   },
-                  child: Icon(Icons.arrow_back, color: Colors.white),
+                  child: Icon(
+                    FontAwesomeIcons.arrowLeftLong,
+                    color: Colors.white,
+                  ),
                 ),
               ],
             ),
@@ -33,7 +37,7 @@ class Variant3RegisterViewBody extends StatelessWidget {
                 "Sign Up",
                 style: Styles.textStyle34.copyWith(color: Colors.white),
               ),
-              Variant4RegisterRichText(),
+              Variant3RegisterRichText(),
             ],
           ),
           const SizedBox(height: 15),

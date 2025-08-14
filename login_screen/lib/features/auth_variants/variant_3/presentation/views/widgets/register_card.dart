@@ -27,7 +27,7 @@ class RegisterCard extends StatelessWidget {
           SizedBox(
             height: 50,
             child: SocialButton(
-              text: "google",
+              text: "Sign up with Google",
               icon: AssetData.googleSocialIcon,
             ),
           ),
