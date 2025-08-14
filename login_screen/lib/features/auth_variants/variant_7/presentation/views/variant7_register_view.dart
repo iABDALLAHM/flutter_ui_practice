@@ -14,17 +14,14 @@ class Variant7RegisterView extends StatelessWidget {
           stops: [0.0, 0.19],
           colors: [
             const Color.fromARGB(255, 112, 191, 255),
-            const Color.fromARGB(255, 251, 254, 255),
+            const Color.fromARGB(255, 227, 227, 227),
           ],
         ),
       ),
       child: Scaffold(
-        appBar: _buildAppBar(),
         backgroundColor: Colors.transparent,
         body: SafeArea(child: Variant7RegisterViewBody()),
       ),
     );
   }
-
-  AppBar _buildAppBar() => AppBar(backgroundColor: Colors.transparent);
 }

@@ -13,13 +13,19 @@ class Variant7RegisterRichText extends StatelessWidget {
       children: [
         Text(
           "Already have an account?",
-          style: Styles.textStyle12.copyWith(color: grayText),
+          style: Styles.textStyle12.copyWith(
+            color: grayText,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         TextButton(
           onPressed: () {
             GoRouter.of(context).pop();
           },
-          child: Text("Log in", style: TextStyle(color: kPrimaryColor)),
+          child: Text(
+            "Log in",
+            style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
+          ),
         ),
       ],
     );

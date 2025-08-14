@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
@@ -17,6 +19,13 @@ class Variant7RegisterViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            IconButton(
+              padding: EdgeInsets.zero,
+              icon: Icon(FontAwesomeIcons.arrowLeftLong, color: Colors.black),
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
+            ),
             Text("Register", style: Styles.textStyle34),
             const SizedBox(height: 12),
             Text(
@@ -24,17 +33,18 @@ class Variant7RegisterViewBody extends StatelessWidget {
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
             const SizedBox(height: 24),
-            CustomTextField(hintText: "Lois"),
+            CustomTextField(hintText: "Lois", isFilled: true),
             const SizedBox(height: 16),
-            CustomTextField(hintText: "Becket"),
+            CustomTextField(hintText: "Becket", isFilled: true),
             const SizedBox(height: 16),
-            CustomTextField(hintText: "Loisbecket@gmail.com"),
+            CustomTextField(hintText: "Loisbecket@gmail.com", isFilled: true),
             const SizedBox(height: 16),
             CustomTextField(
               hintText: "18/03/2024",
+              isFilled: true,
               icon: IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.calendar_month),
+                icon: Icon(FontAwesomeIcons.calendar),
               ),
             ),
             const SizedBox(height: 16),
@@ -43,17 +53,24 @@ class Variant7RegisterViewBody extends StatelessWidget {
                 Expanded(child: DropDownSectionButton()),
                 Expanded(
                   flex: 3,
-                  child: CustomTextField(hintText: "(454) 726-0592"),
+                  child: CustomTextField(
+                    hintText: "(454) 726-0592",
+                    isFilled: true,
+                  ),
                 ),
               ],
             ),
             const SizedBox(height: 16),
-            CustomTextField(hintText: "*******", isPassword: true),
+            CustomTextField(
+              hintText: "*******",
+              isPassword: true,
+              isFilled: true,
+            ),
             const SizedBox(height: 24),
             const SizedBox(
               width: double.infinity,
               height: 50,
-              child: CustomButton(),
+              child: CustomButton(text: "Register"),
             ),
             const SizedBox(height: 60),
             Variant7RegisterRichText(),

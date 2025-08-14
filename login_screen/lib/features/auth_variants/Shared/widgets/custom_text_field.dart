@@ -10,6 +10,7 @@ class CustomTextField extends StatefulWidget {
     this.textInputType = TextInputType.text,
     this.icon,
     this.isPassword = false,
+    this.isFilled = false,
   });
   final TextInputType textInputType;
   final IconButton? icon;
@@ -17,6 +18,8 @@ class CustomTextField extends StatefulWidget {
   final bool isPassword;
   final String? hintText;
   final Function(String)? onSubmit;
+  final bool isFilled;
+
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -31,6 +34,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
       obscureText: widget.isPassword ? _obscuretext : false,
       keyboardType: widget.textInputType,
       decoration: InputDecoration(
+        filled: widget.isFilled,
+        fillColor: const Color.fromARGB(255, 255, 255, 255),
         hintText: widget.hintText,
         hintStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         suffixIcon: widget.isPassword

@@ -31,15 +31,22 @@ class Variant7LoginViewBody extends StatelessWidget {
                   const SizedBox(height: 12),
                   Text(
                     "Enter your email and password to log in",
-                    style: Styles.textStyle12.copyWith(color: grayText),
+                    style: Styles.textStyle12.copyWith(
+                      fontSize: 14,
+                      color: grayText,
+                    ),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 32),
-            CustomTextField(hintText: "Loisbecket@gmail.com"),
+            CustomTextField(hintText: "Loisbecket@gmail.com", isFilled: true),
             const SizedBox(height: 8),
-            CustomTextField(hintText: "********", isPassword: true),
+            CustomTextField(
+              hintText: "********",
+              isPassword: true,
+              isFilled: true,
+            ),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -47,22 +54,31 @@ class Variant7LoginViewBody extends StatelessWidget {
                 RememberMeSection(),
                 Text(
                   "Forgot Password ?",
-                  style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+                  style: Styles.textStyle12.copyWith(
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ],
             ),
-            SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+            SizedBox(width: double.infinity, height: 60, child: CustomButton()),
             const SizedBox(height: 16),
             OrDividerSection(),
             const SizedBox(height: 16),
-            SocialButton(
-              text: "Continue with Google",
-              icon: AssetData.googleSocialIcon,
+            SizedBox(
+              height: 50,
+              child: SocialButton(
+                text: "Continue with Google",
+                icon: AssetData.googleSocialIcon,
+              ),
             ),
             const SizedBox(height: 8),
-            SocialButton(
-              text: "Continue with Facebook",
-              icon: AssetData.facebookSocialIcon,
+            SizedBox(
+              height: 50,
+              child: SocialButton(
+                text: "Continue with Facebook",
+                icon: AssetData.facebookSocialIcon,
+              ),
             ),
             const SizedBox(height: 50),
             Variant7LoginRichText(),
