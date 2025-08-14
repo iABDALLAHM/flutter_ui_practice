@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_screen/features/auth_variants/variant_6/presentation/views/widgets/variant6_register_view_body.dart';
 
@@ -24,7 +25,7 @@ class Variant6RegisterView extends StatelessWidget {
           backgroundColor: Colors.transparent,
           automaticallyImplyLeading: false,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.white),
+            icon: Icon(FontAwesomeIcons.arrowLeftLong, color: Colors.white),
             onPressed: () {
               GoRouter.of(context).pop();
             },
