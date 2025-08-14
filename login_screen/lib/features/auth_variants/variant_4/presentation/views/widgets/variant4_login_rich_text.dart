@@ -17,7 +17,7 @@ class Variant4LoginRichText extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            GoRouter.of(context).push(AppRouter.kVariant4Register);
+            GoRouter.of(context).push(AppRouter.kVariant4RegisterView);
           },
           child: Text(
             "Sign Up",

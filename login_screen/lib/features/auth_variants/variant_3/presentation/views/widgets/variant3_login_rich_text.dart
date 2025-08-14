@@ -15,7 +15,7 @@ class Variant3LoginRichText extends StatelessWidget {
         Text("Don’t have an account?", style: Styles.textStyle12),
         TextButton(
           onPressed: () {
-            GoRouter.of(context).push(AppRouter.kVariant3Register);
+            GoRouter.of(context).push(AppRouter.kVariant3RegisterView);
           },
           child: Text("Sign Up", style: TextStyle(color: kPrimaryColor)),
         ),

@@ -18,14 +18,14 @@ import 'package:login_screen/features/auth_variants/variant_9/presentation/views
 import 'package:login_screen/features/auth_variants/variant_9/presentation/views/variant9_register_view.dart';
 
 class AppRouter {
-  static const kVariant1Login = "/variant1-login";
-  static const kVariant1Register = "/variant1-register";
-  static const kVariant2Login = "/variant2-login";
-  static const kVariant2Register = "/variant2-register";
-  static const kVariant3Login = "/variant3-login";
-  static const kVariant3Register = "/variant3-register";
-  static const kVariant4Login = "/variant4-login";
-  static const kVariant4Register = "/variant4-register";
+  static const kVariant1LoginView = "/variant1-login";
+  static const kVariant1RegisterView = "/variant1-register";
+  static const kVariant2LoginView = "/variant2-login";
+  static const kVariant2RegisterView = "/variant2-register";
+  static const kVariant3LoginView = "/variant3-login";
+  static const kVariant3RegisterView = "/variant3-register";
+  static const kVariant4LoginView = "/variant4-login";
+  static const kVariant4RegisterView = "/variant4-register";
   static const kVariant5AuthView = "/kVariant5AuthView";
   static const kVariant6LoginView = "/variant6-login";
   static const kVariant6RegisterView = "/variant6-register";
@@ -40,35 +40,35 @@ class AppRouter {
     initialLocation: kVariant9LoginView,
     routes: [
       GoRoute(
-        path: kVariant1Login,
+        path: kVariant1LoginView,
         builder: (context, state) => Variant1LoginView(),
       ),
       GoRoute(
-        path: kVariant1Register,
+        path: kVariant1RegisterView,
         builder: (context, state) => Variant1RegisterView(),
       ),
       GoRoute(
-        path: kVariant2Login,
+        path: kVariant2LoginView,
         builder: (context, state) => Variant2LoginView(),
       ),
       GoRoute(
-        path: kVariant2Register,
+        path: kVariant2RegisterView,
         builder: (context, state) => Variant2RegisterView(),
       ),
       GoRoute(
-        path: kVariant3Login,
+        path: kVariant3LoginView,
         builder: (context, state) => Variant3LoginView(),
       ),
       GoRoute(
-        path: kVariant3Register,
+        path: kVariant3RegisterView,
         builder: (context, state) => Variant3RegisterView(),
       ),
       GoRoute(
-        path: kVariant4Login,
+        path: kVariant4LoginView,
         builder: (context, state) => Variant4LoginView(),
       ),
       GoRoute(
-        path: kVariant4Register,
+        path: kVariant4RegisterView,
         builder: (context, state) => Variant4RegisterView(),
       ),
       GoRoute(
