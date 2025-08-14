@@ -14,7 +14,10 @@ class Variant4RemeberMeSection extends StatelessWidget {
         RememberMeSection(),
         Text(
           "Forget Password?",
-          style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+          style: Styles.textStyle12.copyWith(
+            color: kPrimaryColor,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ],
     );

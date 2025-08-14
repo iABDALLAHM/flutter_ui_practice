@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_text_field.dart';
+import 'package:login_screen/features/auth_variants/Shared/widgets/drop_down_section_button.dart';
 import 'package:login_screen/features/auth_variants/variant_4/presentation/views/widgets/variant4_register_rich_text.dart';
 
 class Variant4RegisterViewBody extends StatelessWidget {
@@ -21,7 +23,7 @@ class Variant4RegisterViewBody extends StatelessWidget {
               onTap: () {
                 GoRouter.of(context).pop();
               },
-              child: Icon(Icons.arrow_back, color: Colors.white),
+              child: Icon(FontAwesomeIcons.arrowLeftLong, color: Colors.white),
             ),
             const SizedBox(height: 24),
             Text(
@@ -30,7 +32,7 @@ class Variant4RegisterViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Variant4RegisterRichText(),
-            const SizedBox(height: 50),
+            const SizedBox(height: 30),
             Row(
               children: [
                 Expanded(
@@ -75,7 +77,7 @@ class Variant4RegisterViewBody extends StatelessWidget {
             CustomTextField(
               hintText: "18/03/2024",
               icon: IconButton(
-                icon: Icon(Icons.calendar_month_outlined),
+                icon: Icon(FontAwesomeIcons.calendar),
                 onPressed: () {},
               ),
             ),
@@ -85,7 +87,15 @@ class Variant4RegisterViewBody extends StatelessWidget {
               style: Styles.textStyle12.copyWith(color: grayText),
             ),
             const SizedBox(height: 4),
-            CustomTextField(hintText: "(454) 726-0592"),
+            Row(
+              children: [
+                Expanded(child: DropDownSectionButton()),
+                Expanded(
+                  flex: 3,
+                  child: CustomTextField(hintText: "(454) 726-0592"),
+                ),
+              ],
+            ),
             const SizedBox(height: 20),
             Text(
               "Set Password",
@@ -94,7 +104,11 @@ class Variant4RegisterViewBody extends StatelessWidget {
             const SizedBox(height: 4),
             CustomTextField(isPassword: true, hintText: "*******"),
             const SizedBox(height: 32),
-            SizedBox(height: 50, width: double.infinity, child: CustomButton()),
+            SizedBox(
+              height: 50,
+              width: double.infinity,
+              child: CustomButton(text: "Register"),
+            ),
           ],
         ),
       ),

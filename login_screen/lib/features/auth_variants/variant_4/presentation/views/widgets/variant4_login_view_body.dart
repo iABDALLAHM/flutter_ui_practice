@@ -29,7 +29,7 @@ class Variant4LoginViewBody extends StatelessWidget {
               style: Styles.textStyle34.copyWith(color: Colors.white),
             ),
             Variant4LoginRichText(),
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
             Text("Email", style: Styles.textStyle12.copyWith(color: grayText)),
             const SizedBox(height: 3),
             CustomTextField(hintText: "Loisbecket@gmail.com"),

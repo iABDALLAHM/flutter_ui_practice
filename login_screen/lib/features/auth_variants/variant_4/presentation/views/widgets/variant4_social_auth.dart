@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:login_screen/core/utliz/assets.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/social_button.dart';
@@ -11,17 +10,23 @@ class Variant4SocialAuth extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: SocialButton(
-            text: "Facebook",
-            icon: AssetData.googleSocialIcon,
+          child: SizedBox(
+            height: 50,
+            child: SocialButton(
+              text: "Facebook",
+              icon: AssetData.googleSocialIcon,
+            ),
           ),
         ),
 
         const SizedBox(width: 20),
         Expanded(
-          child: SocialButton(
-            text: "Google",
-            icon: AssetData.facebookSocialIcon,
+          child: SizedBox(
+            height: 50,
+            child: SocialButton(
+              text: "Google",
+              icon: AssetData.facebookSocialIcon,
+            ),
           ),
         ),
       ],

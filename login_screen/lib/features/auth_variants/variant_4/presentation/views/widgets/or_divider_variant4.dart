@@ -14,7 +14,7 @@ class OrDividerVariant4 extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: Text(
             "Or Login With",
-            style: Styles.textStyle12.copyWith(color: grayText),
+            style: Styles.textStyle12.copyWith(color: grayText, fontSize: 14),
           ),
         ),
         Expanded(child: Divider(color: greyDivider)),
