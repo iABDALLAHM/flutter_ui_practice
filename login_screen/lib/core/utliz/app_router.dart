@@ -37,7 +37,7 @@ class AppRouter {
   static const kVariant9RegisterView = "/variant9-register";
 
   static GoRouter routes = GoRouter(
-    initialLocation: kVariant4LoginView,
+    initialLocation: kVariant5AuthView,
     routes: [
       GoRoute(
         path: kVariant1LoginView,

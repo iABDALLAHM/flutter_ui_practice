@@ -30,11 +30,17 @@ class _Variant5LoginViewBodyState extends State<Variant5AuthViewBody> {
               children: [
                 Text(
                   "Create an account or log in to explore",
-                  style: Styles.textStyle12.copyWith(color: grayText),
+                  style: Styles.textStyle12.copyWith(
+                    color: grayText,
+                    fontSize: 15,
+                  ),
                 ),
                 Text(
                   "about our app",
-                  style: Styles.textStyle12.copyWith(color: grayText),
+                  style: Styles.textStyle12.copyWith(
+                    color: grayText,
+                    fontSize: 15,
+                  ),
                 ),
               ],
             ),
