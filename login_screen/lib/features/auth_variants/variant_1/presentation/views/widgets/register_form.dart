@@ -70,7 +70,11 @@ class Variant1RegisterForm extends StatelessWidget {
         const SizedBox(height: 6),
         CustomTextField(isPassword: true, hintText: "***********"),
         const SizedBox(height: 16),
-        SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+        SizedBox(
+          width: double.infinity,
+          height: 50,
+          child: CustomButton(text: "Register"),
+        ),
       ],
     );
   }

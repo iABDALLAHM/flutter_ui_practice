@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
 import 'package:login_screen/features/auth_variants/Shared/widgets/custom_button.dart';
@@ -31,7 +32,7 @@ class Variant2RegisterAuth extends StatelessWidget {
           textInputType: TextInputType.datetime,
           icon: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.calendar_month_outlined),
+            icon: Icon(FontAwesomeIcons.calendar),
           ),
         ),
         const SizedBox(height: 17),
@@ -60,7 +61,11 @@ class Variant2RegisterAuth extends StatelessWidget {
         const SizedBox(height: 4),
         CustomTextField(isPassword: true, hintText: "**********"),
         const SizedBox(height: 17),
-        SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+        SizedBox(
+          width: double.infinity,
+          height: 50,
+          child: CustomButton(text: "Register"),
+        ),
       ],
     );
   }

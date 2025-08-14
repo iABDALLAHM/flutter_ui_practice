@@ -14,7 +14,7 @@ class Variant2LoginView extends StatelessWidget {
           end: Alignment.topCenter,
           colors: [
             Color.fromARGB(255, 0, 225, 255),
-            Color.fromARGB(255, 0, 140, 255),
+            Color.fromARGB(255, 0, 98, 255),
           ],
         ),
       ),
