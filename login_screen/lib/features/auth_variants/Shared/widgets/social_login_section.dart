@@ -12,16 +12,16 @@ class SocialLoginSection extends StatelessWidget {
         SizedBox(
           height: 50,
           child: SocialButton(
-            icon: AssetData.facebookSocialIcon,
-            text: "Continue with Facebook",
+            icon: AssetData.googleSocialIcon,
+            text: "Continue with Google",
           ),
         ),
         const SizedBox(height: 15),
         SizedBox(
           height: 50,
           child: SocialButton(
-            icon: AssetData.googleSocialIcon,
-            text: "Continue with Google",
+            icon: AssetData.facebookSocialIcon,
+            text: "Continue with Facebook",
           ),
         ),
       ],

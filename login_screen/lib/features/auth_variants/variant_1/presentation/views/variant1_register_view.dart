@@ -7,9 +7,8 @@ class Variant1RegisterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(automaticallyImplyLeading: false),
       backgroundColor: Colors.white,
-      body: Variant1RegisterViewBody(),
+      body: SafeArea(child: Variant1RegisterViewBody()),
     );
   }
 }

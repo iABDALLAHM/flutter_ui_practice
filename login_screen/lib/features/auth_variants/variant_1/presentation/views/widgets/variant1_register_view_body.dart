@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_screen/core/constants/constants.dart';
 import 'package:login_screen/core/utliz/styles.dart';
@@ -10,9 +11,9 @@ class Variant1RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -20,7 +21,7 @@ class Variant1RegisterViewBody extends StatelessWidget {
               onTap: () {
                 GoRouter.of(context).pop();
               },
-              child: Icon(Icons.arrow_back, size: 20),
+              child: Icon(FontAwesomeIcons.arrowLeftLong),
             ),
             const SizedBox(height: 22),
             Text("Sign up", style: Styles.textStyle34),

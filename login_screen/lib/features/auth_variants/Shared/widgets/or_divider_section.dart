@@ -14,7 +14,7 @@ class OrDividerSection extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 10),
           child: Text(
             "Or",
-            style: Styles.textStyle12.copyWith(color: grayText),
+            style: Styles.textStyle12.copyWith(color: grayText, fontSize: 17),
           ),
         ),
         Expanded(child: Divider(color: greyDivider)),

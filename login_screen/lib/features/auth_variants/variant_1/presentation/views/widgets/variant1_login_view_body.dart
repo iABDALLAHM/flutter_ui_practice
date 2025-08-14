@@ -20,6 +20,7 @@ class Variant1LoginViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 16),
             Image(image: AssetImage(AssetData.appLogo)),
             const SizedBox(height: 32),
             Text("Sign in to your", style: Styles.textStyle34),
@@ -43,12 +44,12 @@ class Variant1LoginViewBody extends StatelessWidget {
             const SizedBox(height: 16),
             ForgetPasswordSection(),
             const SizedBox(height: 24),
-            SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+            SizedBox(width: double.infinity, height: 60, child: CustomButton()),
             const SizedBox(height: 24),
             OrDividerSection(),
             const SizedBox(height: 15),
             SocialLoginSection(),
-            const SizedBox(height: 54),
+            const SizedBox(height: 30),
             Variant1LoginRichText(),
           ],
         ),

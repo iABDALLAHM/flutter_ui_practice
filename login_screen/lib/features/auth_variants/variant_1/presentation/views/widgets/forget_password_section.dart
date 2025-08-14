@@ -14,7 +14,10 @@ class ForgetPasswordSection extends StatelessWidget {
           onTap: () {},
           child: Text(
             "Forgot Password ?",
-            style: Styles.textStyle12.copyWith(color: kPrimaryColor),
+            style: Styles.textStyle12.copyWith(
+              color: kPrimaryColor,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ],

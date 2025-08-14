@@ -7,12 +7,7 @@ class Variant1LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: _buildAppBar(),
-      body: Variant1LoginViewBody(),
+      body: SafeArea(child: Variant1LoginViewBody()),
     );
-  }
-
-  AppBar _buildAppBar() {
-    return AppBar();
   }
 }
