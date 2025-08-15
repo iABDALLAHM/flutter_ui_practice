@@ -7,9 +7,11 @@ class Variant8RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [Image.asset(AssetData.appLogo), Variant8RegisterCard()],
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [Image.asset(AssetData.appLogo), Variant8RegisterCard()],
+      ),
     );
   }
 }

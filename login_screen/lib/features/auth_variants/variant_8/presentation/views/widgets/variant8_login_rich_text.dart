@@ -14,13 +14,19 @@ class Variant8LoginRichText extends StatelessWidget {
       children: [
         Text(
           "Don’t have an account?",
-          style: Styles.textStyle12.copyWith(color: grayText),
+          style: Styles.textStyle12.copyWith(
+            color: grayText,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         TextButton(
           onPressed: () {
             GoRouter.of(context).push(AppRouter.kVariant8RegisterView);
           },
-          child: Text("Sign Up", style: TextStyle(color: kPrimaryColor)),
+          child: Text(
+            "Sign Up",
+            style: TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold),
+          ),
         ),
       ],
     );

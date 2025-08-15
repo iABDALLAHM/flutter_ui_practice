@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:login_screen/core/utliz/styles.dart';
+import 'package:login_screen/features/auth_variants/variant_8/presentation/views/widgets/gradiant_text.dart';
 import 'package:login_screen/features/auth_variants/variant_8/presentation/views/widgets/register_auth_forms.dart';
 import 'package:login_screen/features/auth_variants/variant_8/presentation/views/widgets/variant8_register_rich_text.dart';
 
@@ -19,18 +20,18 @@ class Variant8RegisterCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 24),
+          const SizedBox(height: 10),
           GestureDetector(
             onTap: () {
               GoRouter.of(context).pop();
             },
-            child: Icon(Icons.arrow_back),
+            child: Icon(FontAwesomeIcons.arrowLeftLong),
           ),
-          const SizedBox(height: 6),
-          Align(child: Text("Sign Up", style: Styles.textStyle34)),
-          const SizedBox(height: 12),
+          const SizedBox(height: 4),
+          Align(child: Variant8GradiantText(text: "Sign Up")),
+          const SizedBox(height: 5),
           Variant8RegisterRichText(),
-          const SizedBox(height: 25),
+          const SizedBox(height: 10),
           RegisterAuthForms(),
         ],
       ),

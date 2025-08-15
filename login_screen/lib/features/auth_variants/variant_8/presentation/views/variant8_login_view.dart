@@ -8,14 +8,12 @@ class Variant8LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.topRight,
-          stops: [0.0, 0.2, 0.3],
+        gradient: SweepGradient(
+          center: Alignment.center,
           colors: [
-            Colors.blueAccent,
-            Colors.blue,
-            const Color.fromARGB(255, 187, 0, 255),
+            const Color(0xff4983F6),
+            const Color(0xffC175F5),
+            const Color(0xffFBACB7),
           ],
         ),
       ),
