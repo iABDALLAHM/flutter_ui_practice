@@ -68,7 +68,11 @@ class RegisterAuthForms extends StatelessWidget {
         const SizedBox(height: 2),
         CustomTextField(isPassword: true, hintText: "*******"),
         const SizedBox(height: 17),
-        SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+        SizedBox(
+          width: double.infinity,
+          height: 50,
+          child: CustomButton(text: "Register"),
+        ),
         const SizedBox(height: 24),
       ],
     );

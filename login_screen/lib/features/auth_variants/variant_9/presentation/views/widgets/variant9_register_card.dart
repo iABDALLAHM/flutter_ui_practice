@@ -69,7 +69,11 @@ class Variant9RegisterCard extends StatelessWidget {
             isFilled: true,
           ),
           const SizedBox(height: 24),
-          SizedBox(width: double.infinity, height: 50, child: CustomButton()),
+          SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: CustomButton(text: "Register"),
+          ),
           const SizedBox(height: 24),
           Variant9RegisterRichText(),
           const SizedBox(height: 15),
