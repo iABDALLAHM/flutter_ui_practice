@@ -34,9 +34,13 @@ class Variant9LoginCard extends StatelessWidget {
             style: Styles.textStyle12.copyWith(color: grayText),
           ),
           const SizedBox(height: 24),
-          CustomTextField(hintText: "Loisbecket@gmail.com"),
+          CustomTextField(hintText: "Loisbecket@gmail.com", isFilled: true),
           const SizedBox(height: 6),
-          CustomTextField(isPassword: true, hintText: "*******"),
+          CustomTextField(
+            isPassword: true,
+            hintText: "*******",
+            isFilled: true,
+          ),
           const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

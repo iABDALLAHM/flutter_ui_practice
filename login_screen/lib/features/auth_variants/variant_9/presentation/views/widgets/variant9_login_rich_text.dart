@@ -20,7 +20,10 @@ class Variant9LoginRichText extends StatelessWidget {
           onPressed: () {
             GoRouter.of(context).push(AppRouter.kVariant9RegisterView);
           },
-          child: Text("Sign Up", style: TextStyle(color: kPrimaryColor)),
+          child: Hero(
+            tag: "Sign Up",
+            child: Text("Sign Up", style: TextStyle(color: kPrimaryColor)),
+          ),
         ),
       ],
     );
