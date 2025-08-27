@@ -18,7 +18,7 @@ class ChooseGenderWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(20),

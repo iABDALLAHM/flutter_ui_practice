@@ -1,4 +1,5 @@
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/choose_gender_widget.dart';
+import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/personal_info_section.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/slider_section.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 7),
+      padding: EdgeInsets.symmetric(horizontal: 15),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -31,7 +32,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                   },
                   icon: Icons.male_rounded,
                   text: "Male",
-                  color: const Color.fromARGB(255, 27, 26, 38),
+                  color: const Color.fromARGB(97, 27, 26, 38),
                 ),
                 ChooseGenderWidget(
                   icon: Icons.female_rounded,
@@ -44,7 +45,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 ),
               ],
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 15),
             SliderSection(
               value: value,
               onChange: (p0) {
@@ -53,9 +54,17 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 });
               },
             ),
-            const SizedBox(height: 35),
-            Row(children: [
-            ],),
+            const SizedBox(height: 15),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                PersonalInfoSection(
+                  text: "Weight",
+                  color: const Color.fromARGB(97, 27, 26, 38),
+                ),
+                PersonalInfoSection(text: "Age"),
+              ],
+            ),
           ],
         ),
       ),

@@ -13,13 +13,14 @@ class _SliderSectionState extends State<SliderSection> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      padding: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         color: Color(0xff333244),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         children: [
+          const SizedBox(height: 15),
           Text(
             "Height",
             style: Styles.textStyle25.copyWith(
@@ -27,7 +28,7 @@ class _SliderSectionState extends State<SliderSection> {
               fontWeight: FontWeight.normal,
             ),
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           RichText(
             text: TextSpan(
               children: [
@@ -39,7 +40,7 @@ class _SliderSectionState extends State<SliderSection> {
               ],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           Slider(
             min: 0,
             max: 200,

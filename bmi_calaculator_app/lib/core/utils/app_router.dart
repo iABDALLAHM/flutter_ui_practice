@@ -6,6 +6,7 @@ class AppRouter {
   static const kHomeView = "/";
   static const kResultView = "calc_view";
   static GoRouter router = GoRouter(
+    initialLocation: kHomeView,
     routes: [
       GoRoute(path: kHomeView, builder: (context, state) => HomeView()),
       GoRoute(path: kResultView, builder: (context, state) => ResultView()),
