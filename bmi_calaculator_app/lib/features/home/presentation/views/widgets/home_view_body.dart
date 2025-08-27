@@ -1,7 +1,10 @@
+import 'package:bmi_calaculator_app/core/utils/app_router.dart';
+import 'package:bmi_calaculator_app/core/widgets/custom_button.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/choose_gender_widget.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/personal_info_section.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/slider_section.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -15,59 +18,75 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   late String selectedGender;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15),
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ChooseGenderWidget(
-                  onTap: () {
-                    setState(() {
-                      selectedGender = "Male";
-                    });
-                  },
-                  icon: Icons.male_rounded,
-                  text: "Male",
-                  color: const Color.fromARGB(97, 27, 26, 38),
-                ),
-                ChooseGenderWidget(
-                  icon: Icons.female_rounded,
-                  text: "Female",
-                  onTap: () {
-                    setState(() {
-                      selectedGender = "Female";
-                    });
-                  },
-                ),
-              ],
-            ),
-            const SizedBox(height: 15),
-            SliderSection(
-              value: value,
-              onChange: (p0) {
-                setState(() {
-                  value = p0;
-                });
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ChooseGenderWidget(
+                    onTap: () {
+                      setState(() {
+                        selectedGender = "Male";
+                      });
+                    },
+                    icon: Icons.male_rounded,
+                    text: "Male",
+                    color: const Color.fromARGB(97, 27, 26, 38),
+                  ),
+                  ChooseGenderWidget(
+                    icon: Icons.female_rounded,
+                    text: "Female",
+                    onTap: () {
+                      setState(() {
+                        selectedGender = "Female";
+                      });
+                    },
+                  ),
+                ],
+              ),
+              const SizedBox(height: 15),
+              SliderSection(
+                value: value,
+                onChange: (p0) {
+                  setState(() {
+                    value = p0;
+                  });
+                },
+              ),
+              const SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  PersonalInfoSection(
+                    text: "Weight",
+                    color: const Color.fromARGB(97, 27, 26, 38),
+                  ),
+                  PersonalInfoSection(text: "Age"),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 45),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: SizedBox(
+            width: double.infinity,
+            height: 70,
+            child: CustomButtom(
+              text: "Calculate",
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kResultView);
               },
             ),
-            const SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                PersonalInfoSection(
-                  text: "Weight",
-                  color: const Color.fromARGB(97, 27, 26, 38),
-                ),
-                PersonalInfoSection(text: "Age"),
-              ],
-            ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }

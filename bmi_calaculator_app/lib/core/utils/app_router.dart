@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static const kHomeView = "/";
-  static const kResultView = "calc_view";
+  static const kResultView = "/calc_view";
   static GoRouter router = GoRouter(
     initialLocation: kHomeView,
     routes: [
