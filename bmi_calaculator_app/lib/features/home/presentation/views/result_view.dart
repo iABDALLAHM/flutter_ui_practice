@@ -4,14 +4,15 @@ import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/res
 import 'package:flutter/material.dart';
 
 class ResultView extends StatelessWidget {
-  const ResultView({super.key});
+  const ResultView({super.key, required this.result});
+  final double result;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: _buildAppBar(),
-      body: SafeArea(child: ResultViewBody()),
+      body: SafeArea(child: ResultViewBody(result: result)),
     );
   }
 

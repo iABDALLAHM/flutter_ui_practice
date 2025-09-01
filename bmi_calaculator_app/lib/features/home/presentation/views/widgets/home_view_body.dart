@@ -1,5 +1,6 @@
 import 'package:bmi_calaculator_app/core/utils/app_router.dart';
 import 'package:bmi_calaculator_app/core/widgets/custom_button.dart';
+import 'package:bmi_calaculator_app/features/home/data/models/user_data.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/choose_gender_widget.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/personal_info_section.dart';
 import 'package:bmi_calaculator_app/features/home/presentation/views/widgets/slider_section.dart';
@@ -16,6 +17,9 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   double value = 0;
   late String selectedGender;
+  late UserData userData;
+  late int weight;
+  late int age;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -63,27 +67,43 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   PersonalInfoSection(
+                    onValueChanged: (value) {
+                      setState(() {
+                        weight = value;
+                      });
+                    },
                     text: "Weight",
                     color: const Color.fromARGB(97, 27, 26, 38),
                   ),
-                  PersonalInfoSection(text: "Age"),
+                  PersonalInfoSection(
+                    text: "Age",
+                    onValueChanged: (value) {
+                      setState(() {
+                        age = value;
+                      });
+                    },
+                  ),
                 ],
               ),
             ],
           ),
         ),
         const SizedBox(height: 45),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: SizedBox(
-            width: double.infinity,
-            height: 70,
-            child: CustomButtom(
-              text: "Calculate",
-              onPressed: () {
-                GoRouter.of(context).push(AppRouter.kResultView);
-              },
-            ),
+        SizedBox(
+          width: double.infinity,
+          height: 70,
+          child: CustomButtom(
+            text: "Calculate",
+            onPressed: () {
+              userData = UserData(
+                user: selectedGender,
+                height: value,
+                age: age,
+                weight: weight,
+              );
+              var result = weight / value;
+              GoRouter.of(context).push(AppRouter.kResultView, extra: result);
+            },
           ),
         ),
       ],

@@ -9,7 +9,13 @@ class AppRouter {
     initialLocation: kHomeView,
     routes: [
       GoRoute(path: kHomeView, builder: (context, state) => HomeView()),
-      GoRoute(path: kResultView, builder: (context, state) => ResultView()),
+      GoRoute(
+        path: kResultView,
+        builder: (context, state) {
+          final res = state.extra as double;
+          return ResultView(result: res);
+        },
+      ),
     ],
   );
 }

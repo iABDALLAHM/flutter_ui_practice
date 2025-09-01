@@ -2,8 +2,8 @@ import 'package:bmi_calaculator_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class ResultCard extends StatelessWidget {
-  const ResultCard({super.key});
-
+  const ResultCard({super.key, required this.res});
+  final double res;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +21,7 @@ class ResultCard extends StatelessWidget {
           ),
           const SizedBox(height: 33),
           Text(
-            "19.2",
+            res.round().toString(),
             style: Styles.textStyle50.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -29,12 +29,24 @@ class ResultCard extends StatelessWidget {
           ),
           const SizedBox(height: 60),
           Text(
-            "You Have a Normal Body Weight,\nGood Job.",
+            getBMICategory(res),
             style: Styles.textStyle20.copyWith(color: Color(0xff8B8C9E)),
           ),
           const SizedBox(height: 230),
         ],
       ),
     );
+  }
+
+  String getBMICategory(double bmi) {
+    if (bmi < 18.5) {
+      return "Underweight";
+    } else if (bmi < 25) {
+      return "Normal";
+    } else if (bmi < 30) {
+      return "Overweight";
+    } else {
+      return "it's Fat";
+    }
   }
 }

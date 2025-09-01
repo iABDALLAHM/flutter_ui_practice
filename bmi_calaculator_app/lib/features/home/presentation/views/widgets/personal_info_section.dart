@@ -7,9 +7,11 @@ class PersonalInfoSection extends StatefulWidget {
     super.key,
     required this.text,
     this.color = const Color(0xff333244),
+    required this.onValueChanged,
   });
   final String text;
   final Color color;
+  final ValueChanged<int> onValueChanged;
 
   @override
   State<PersonalInfoSection> createState() => _PersonalInfoSectionState();
@@ -17,6 +19,13 @@ class PersonalInfoSection extends StatefulWidget {
 
 class _PersonalInfoSectionState extends State<PersonalInfoSection> {
   int conter = 0;
+  void _updateCounter({required int newValue}) {
+    setState(() {
+      conter = newValue;
+    });
+    widget.onValueChanged(conter);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,9 +53,9 @@ class _PersonalInfoSectionState extends State<PersonalInfoSection> {
                 onPressed: () {
                   setState(() {
                     if (conter == 0) {
-                      conter = 0;
+                      _updateCounter(newValue: 0);
                     } else {
-                      conter--;
+                      _updateCounter(newValue: conter -= 1);
                     }
                   });
                 },
@@ -56,7 +65,7 @@ class _PersonalInfoSectionState extends State<PersonalInfoSection> {
                 icon: Icon(Icons.add, size: 35),
                 onPressed: () {
                   setState(() {
-                    conter++;
+                    _updateCounter(newValue: conter += 1);
                   });
                 },
               ),

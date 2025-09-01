@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ResultViewBody extends StatelessWidget {
-  const ResultViewBody({super.key});
-
+  const ResultViewBody({super.key, required this.result});
+  final double result;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,22 +23,19 @@ class ResultViewBody extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
               const SizedBox(height: 25),
-              ResultCard(),
+              ResultCard(res: result),
               const SizedBox(height: 25),
             ],
           ),
         ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: SizedBox(
-            width: double.infinity,
-            height: 70,
-            child: CustomButtom(
-              text: "Re - Calculate",
-              onPressed: () {
-                GoRouter.of(context).pop();
-              },
-            ),
+        SizedBox(
+          width: double.infinity,
+          height: 70,
+          child: CustomButtom(
+            text: "Re - Calculate",
+            onPressed: () {
+              GoRouter.of(context).pop();
+            },
           ),
         ),
       ],
