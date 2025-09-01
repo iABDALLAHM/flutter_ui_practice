@@ -24,18 +24,21 @@ class ResultViewBody extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               ResultCard(res: result),
-              const SizedBox(height: 25),
+              const SizedBox(height: 50),
             ],
           ),
         ),
-        SizedBox(
-          width: double.infinity,
-          height: 70,
-          child: CustomButtom(
-            text: "Re - Calculate",
-            onPressed: () {
-              GoRouter.of(context).pop();
-            },
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: SizedBox(
+            width: double.infinity,
+            height: 70,
+            child: CustomButtom(
+              text: "Re - Calculate",
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
+            ),
           ),
         ),
       ],
