@@ -15,16 +15,21 @@ class ToggleItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
+        height: 40,
         curve: Curves.linear,
         duration: Duration(milliseconds: 2),
         decoration: BoxDecoration(
-          color: isSelected ? Colors.red : Colors.amber,
+          borderRadius: BorderRadius.circular(20),
+          color: isSelected ? Color(0xffBE0127) : Color(0xffF8E0A0),
         ),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 20,
-            color: isSelected ? Colors.white : Colors.red,
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: isSelected ? Colors.white : Color(0xffBE0127),
+            ),
           ),
         ),
       ),

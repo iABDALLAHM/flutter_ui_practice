@@ -8,11 +8,28 @@ class ORSocialAuth extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("OR"),
+        const Text(
+          "OR",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+            color: Color.fromARGB(255, 123, 123, 123),
+          ),
+        ),
+        const SizedBox(height: 10),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage(AssetData.facebookIcon)),
-            Image(image: AssetImage(AssetData.googleIcon)),
+            Image(
+              image: AssetImage(AssetData.googleIcon),
+              width: 40,
+              height: 40,
+            ),
+            Image(
+              image: AssetImage(AssetData.facebookIcon),
+              width: 40,
+              height: 40,
+            ),
           ],
         ),
       ],

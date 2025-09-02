@@ -9,6 +9,7 @@ class CustomTextField extends StatelessWidget {
       cursorColor: Color(0xffBE0127),
       decoration: InputDecoration(
         hintText: hintText,
+        border: _buildUnderlineInputBorder(),
         enabledBorder: _buildUnderlineInputBorder(),
         focusedBorder: _buildUnderlineInputBorder(),
       ),
