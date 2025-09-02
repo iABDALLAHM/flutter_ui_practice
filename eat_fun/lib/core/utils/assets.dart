@@ -1,4 +1,7 @@
 abstract class AssetData {
   static String mainAppLogo = "assets/images/mainapplogo.png";
   static String spalshIcon = "assets/images/splashicon.png";
+  static String cardBackGround = "assets/images/cardBackGround.png";
+  static String facebookIcon = "assets/images/facebookicon.png";
+  static String googleIcon = "assets/images/googleicon.png";
 }
