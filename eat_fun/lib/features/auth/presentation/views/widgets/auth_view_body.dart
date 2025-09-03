@@ -22,7 +22,6 @@ class AuthViewBody extends StatelessWidget {
               const SizedBox(width: 70),
               Image(
                 image: AssetImage(AssetData.authBurger),
-     
               ),
             ],
           ),

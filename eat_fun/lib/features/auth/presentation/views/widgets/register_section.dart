@@ -1,6 +1,8 @@
+import 'package:eat_fun/core/utils/app_router.dart';
 import 'package:eat_fun/core/widgets/custom_button.dart';
 import 'package:eat_fun/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class RegisterSection extends StatelessWidget {
   const RegisterSection({super.key});
@@ -12,7 +14,9 @@ class RegisterSection extends StatelessWidget {
         const SizedBox(height: 18),
         CustomTextField(hintText: "Confirm Password"),
         const SizedBox(height: 33),
-        CustomButton(text: "Sign Up"),
+        CustomButton(text: "Sign Up",onPressed: () {
+          GoRouter.of(context).push(AppRouter.kHomeView);
+        },),
       ],
     );
   }
