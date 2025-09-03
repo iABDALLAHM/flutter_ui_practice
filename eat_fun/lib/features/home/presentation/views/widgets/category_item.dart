@@ -1,0 +1,49 @@
+import 'package:eat_fun/core/utils/styels.dart';
+import 'package:flutter/material.dart';
+
+class CategoryItem extends StatelessWidget {
+  const CategoryItem({super.key, this.isSelected = false, required this.name});
+  final bool isSelected;
+  final String name;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                offset: Offset(0, 4),
+                blurRadius: 5,
+                color: isSelected ? Color(0xffEA3322) : Colors.grey,
+              ),
+            ],
+            border: Border.all(
+              width: 2,
+              color: isSelected ? Color(0xffEA3322) : Colors.transparent,
+            ),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          width: 120,
+          height: 80,
+          child: Center(
+            child: Icon(
+              Icons.search,
+              size: 35,
+              color: isSelected ? Colors.black87 : Colors.grey,
+            ),
+          ),
+        ),
+        const SizedBox(height: 5),
+        Text(
+          name,
+          style: Styels.textStyle20.copyWith(
+            fontWeight: FontWeight.bold,
+            color: isSelected ? Color(0xffEA3322) : Colors.grey,
+          ),
+        ),
+      ],
+    );
+  }
+}
