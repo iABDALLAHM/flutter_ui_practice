@@ -1,5 +1,5 @@
 import 'package:eat_fun/core/utils/styels.dart';
-import 'package:eat_fun/features/home/data/models/category_model.dart';
+import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -10,7 +10,7 @@ class CategoryItem extends StatelessWidget {
     required this.onTap,
   });
   final bool isSelected;
-  final CategoryModel categoryModel;
+  final FoodModel categoryModel;
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,8 @@ class CategoryItem extends StatelessWidget {
             height: 80,
             child: Center(
               child: Icon(
-                categoryModel.icon,
+                // categoryModel.icon,
+                Icons.search,
                 size: 35,
                 color: isSelected ? Colors.black87 : Colors.grey,
               ),

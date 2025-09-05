@@ -1,6 +1,4 @@
-import 'package:eat_fun/core/utils/assets.dart';
 import 'package:eat_fun/core/utils/styels.dart';
-import 'package:eat_fun/features/home/data/models/category_model.dart';
 import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:eat_fun/features/home/presentation/views/widgets/category_card_item_list_view.dart';
 import 'package:eat_fun/features/home/presentation/views/widgets/category_item_list_view.dart';
@@ -17,28 +15,8 @@ class _CategorySectionState extends State<CategorySection> {
   bool isSelected = false;
   String selected = "Burgers";
 
-  final List<CategoryModel> categoryList = [
-    CategoryModel(categoryName: "Burgers", icon: Icons.local_pizza),
-    CategoryModel(categoryName: "Pizza", icon: Icons.search),
-    CategoryModel(categoryName: "Drinks", icon: Icons.access_alarm),
-  ];
-  final List<FoodModel> foodList = [
-    FoodModel(
-      foodImage: AssetData.homeBurger,
-      foodName: "foodName",
-      foodPrice: "foodPrice",
-    ),
-    FoodModel(
-      foodImage: AssetData.homeBurger,
-      foodName: "foodName",
-      foodPrice: "foodPrice",
-    ),
-    FoodModel(
-      foodImage: AssetData.homeBurger,
-      foodName: "foodName",
-      foodPrice: "foodPrice",
-    ),
-  ];
+  final List<FoodModel> categoryList = [];
+  final List<FoodModel> foodList = [];
   @override
   Widget build(BuildContext context) {
     return Column(

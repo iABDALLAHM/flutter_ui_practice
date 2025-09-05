@@ -27,7 +27,7 @@ class CategoryCardItem extends StatelessWidget {
               Icon(Icons.star_outline),
             ],
           ),
-          Text(foodModel.foodPrice, style: Styels.textStyle25),
+          Text(foodModel.foodPrice.toString(), style: Styels.textStyle25),
         ],
       ),
     );

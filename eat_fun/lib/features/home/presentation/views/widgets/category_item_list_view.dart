@@ -1,4 +1,4 @@
-import 'package:eat_fun/features/home/data/models/category_model.dart';
+import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:eat_fun/features/home/presentation/views/widgets/category_item.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,7 @@ class CategoryItemListView extends StatelessWidget {
     required this.onTap,
     required this.isSelected,
   });
-  final List<CategoryModel> categories;
+  final List<FoodModel> categories;
   final Function(String) onTap;
   final bool isSelected;
 
