@@ -1,9 +1,15 @@
 import 'package:eat_fun/core/utils/styels.dart';
+import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key, this.isSelected = false});
+  const CategoryItem({
+    super.key,
+    this.isSelected = false,
+    required this.categoryName,
+  });
   final bool isSelected;
+  final FoodModel categoryName;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -29,7 +35,6 @@ class CategoryItem extends StatelessWidget {
             height: 80,
             child: Center(
               child: Icon(
-                // categoryModel.icon,
                 Icons.search,
                 size: 35,
                 color: isSelected ? Colors.black87 : Colors.grey,
@@ -38,7 +43,7 @@ class CategoryItem extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           Text(
-            "categoryName",
+            categoryName.categoryName,
             style: Styels.textStyle20.copyWith(
               fontWeight: FontWeight.bold,
               color: isSelected ? Color(0xffEA3322) : Colors.grey,
