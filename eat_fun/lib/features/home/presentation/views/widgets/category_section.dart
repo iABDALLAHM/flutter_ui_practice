@@ -15,6 +15,8 @@ class CategorySection extends StatefulWidget {
 class _CategorySectionState extends State<CategorySection> {
   List<FoodModel> category = [];
   List<FoodModel> foods = [];
+  FoodModel? whatIsSelected;
+
   @override
   void initState() {
     loadingCategorise();
@@ -24,16 +26,24 @@ class _CategorySectionState extends State<CategorySection> {
 
   Future<void> loadingCategorise() async {
     category = await GetFoodServices().getCategories();
+    if (category.isNotEmpty) {
+      whatIsSelected = category.first;
+    }
     setState(() {});
   }
 
   Future<void> loadingFoods() async {
-    foods = await GetFoodServices().getFood(categoryName: "");
+    foods = await GetFoodServices().getFood(
+      categoryName: " whatIsSelected!.categoryName",
+    );
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
+    if (category.isEmpty || whatIsSelected == null) {
+      return const Center(child: CircularProgressIndicator());
+    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -52,11 +62,14 @@ class _CategorySectionState extends State<CategorySection> {
         ),
 
         Text(
-          "What Is Selected",
+          whatIsSelected!.categoryName,
           style: Styels.textStyle25.copyWith(color: Colors.black),
         ),
-
-        SizedBox(height: 250, child: CategoryCardItemListView()),
+        const SizedBox(height: 20),
+        SizedBox(
+          height: 250,
+          child: CategoryCardItemListView(foodsList: foods),
+        ),
       ],
     );
   }

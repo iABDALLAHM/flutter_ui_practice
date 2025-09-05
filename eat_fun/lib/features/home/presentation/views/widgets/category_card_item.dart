@@ -1,9 +1,10 @@
-import 'package:eat_fun/core/utils/assets.dart';
 import 'package:eat_fun/core/utils/styels.dart';
+import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCardItem extends StatelessWidget {
-  const CategoryCardItem({super.key});
+  const CategoryCardItem({super.key, required this.foodModel});
+  final FoodModel foodModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,8 +16,8 @@ class CategoryCardItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image(image: AssetImage(AssetData.homeBurger)),
-          Text("foodModel.foodName", style: Styels.textStyle25),
+          Image(image: AssetImage(foodModel.foodImage!)),
+          Text(foodModel.foodName!, style: Styels.textStyle25),
           Row(
             children: [
               Icon(Icons.star_outline),
@@ -26,7 +27,11 @@ class CategoryCardItem extends StatelessWidget {
               Icon(Icons.star_outline),
             ],
           ),
-          Text("foodModel.foodPrice.toString()", style: Styels.textStyle25),
+          Text(
+            "${foodModel.foodPrice.toString()}"
+            r"$",
+            style: Styels.textStyle25,
+          ),
         ],
       ),
     );

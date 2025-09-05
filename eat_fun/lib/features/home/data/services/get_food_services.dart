@@ -9,7 +9,7 @@ class GetFoodServices {
       "assets/data/Eat_Fun.json",
     );
     final List<dynamic> data = jsonDecode(response);
-    return data.map((item) => FoodModel.categoryFromJson(item)).toList();
+    return data.map((item) => FoodModel.fromJson(item)).toList();
   }
 
   Future<List<FoodModel>> getCategories() async {
