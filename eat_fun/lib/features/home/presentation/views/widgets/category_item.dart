@@ -1,21 +1,12 @@
 import 'package:eat_fun/core/utils/styels.dart';
-import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({
-    super.key,
-    this.isSelected = false,
-    required this.categoryModel,
-    required this.onTap,
-  });
+  const CategoryItem({super.key, this.isSelected = false});
   final bool isSelected;
-  final FoodModel categoryModel;
-  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
       child: Column(
         children: [
           Container(
@@ -47,7 +38,7 @@ class CategoryItem extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           Text(
-            categoryModel.categoryName,
+            "categoryName",
             style: Styels.textStyle20.copyWith(
               fontWeight: FontWeight.bold,
               color: isSelected ? Color(0xffEA3322) : Colors.grey,
