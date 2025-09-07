@@ -7,32 +7,42 @@ class CategoryCardItem extends StatelessWidget {
   final FoodModel foodModel;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: Colors.green,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image(image: AssetImage(foodModel.foodImage!)),
-          Text(foodModel.foodName!, style: Styels.textStyle25),
-          Row(
-            children: [
-              Icon(Icons.star_outline),
-              Icon(Icons.star_outline),
-              Icon(Icons.star_outline),
-              Icon(Icons.star_outline),
-              Icon(Icons.star_outline),
-            ],
-          ),
-          Text(
-            "${foodModel.foodPrice.toString()}"
-            r"$",
-            style: Styels.textStyle25,
-          ),
-        ],
+    return SizedBox(
+      width: 240,
+      child: Container(
+        padding: EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image(image: AssetImage(foodModel.foodImage!)),
+            Expanded(
+              child: Text(
+                foodModel.foodName!,
+                style: Styels.textStyle25,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Row(
+              children: [
+                Icon(Icons.star_outline),
+                Icon(Icons.star_outline),
+                Icon(Icons.star_outline),
+                Icon(Icons.star_outline),
+                Icon(Icons.star_outline),
+              ],
+            ),
+            Text(
+              "${foodModel.foodPrice.toString()}"
+              r"$",
+              style: Styels.textStyle25,
+            ),
+          ],
+        ),
       ),
     );
   }

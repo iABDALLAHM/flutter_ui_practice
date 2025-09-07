@@ -6,11 +6,11 @@ class CategoryItemListView extends StatelessWidget {
   const CategoryItemListView({
     super.key,
     required this.onTap,
-    required this.isSelected,
+    required this.selectedCategory,
     required this.categoryList,
   });
-  final Function(String) onTap;
-  final bool isSelected;
+  final Function(FoodModel) onTap;
+  final FoodModel selectedCategory;
   final List<FoodModel> categoryList;
 
   @override
@@ -22,8 +22,9 @@ class CategoryItemListView extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.only(right: 10),
           child: CategoryItem(
+            onTap: () => onTap(categoryList[index]),
             categoryName: categoryList[index],
-            isSelected: isSelected,
+            isSelected: categoryList[index] == selectedCategory,
           ),
         );
       },

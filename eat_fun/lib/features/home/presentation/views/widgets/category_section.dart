@@ -55,9 +55,13 @@ class _CategorySectionState extends State<CategorySection> {
         SizedBox(
           height: 140,
           child: CategoryItemListView(
-            isSelected: false,
-            onTap: (p0) {},
             categoryList: category,
+            selectedCategory: whatIsSelected!,
+            onTap: (selected) {
+              setState(() {
+                whatIsSelected = selected;
+              });
+            },
           ),
         ),
 

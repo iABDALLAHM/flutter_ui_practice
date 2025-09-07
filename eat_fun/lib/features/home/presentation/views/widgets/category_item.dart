@@ -7,12 +7,15 @@ class CategoryItem extends StatelessWidget {
     super.key,
     this.isSelected = false,
     required this.categoryName,
+    required this.onTap,
   });
   final bool isSelected;
+  final VoidCallback onTap;
   final FoodModel categoryName;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onTap,
       child: Column(
         children: [
           Container(
