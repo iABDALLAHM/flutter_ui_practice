@@ -1,23 +1,31 @@
-class FoodModel {
-  final String categoryName;
+class FoodItem {
   final String? foodName;
   final int? foodPrice;
   final String? foodImage;
-  FoodModel({
-    required this.categoryName,
-    this.foodImage,
-    this.foodName,
-    this.foodPrice,
-  });
-  factory FoodModel.fromJson(jsonData) {
-    return FoodModel(
-      categoryName: jsonData["category_name"],
+  FoodItem({this.foodImage, this.foodName, this.foodPrice});
+  factory FoodItem.fromJson(jsonData) {
+    return FoodItem(
       foodImage: jsonData["food_image"],
       foodName: jsonData["food_name"],
       foodPrice: jsonData["food_price"],
     );
   }
-  factory FoodModel.categoryFromJson(jsonData) {
-    return FoodModel(categoryName: jsonData["category_name"]);
+}
+
+class FoodCategory {
+  final String categoryName;
+  final List<FoodItem> items;
+
+  FoodCategory({required this.categoryName, required this.items});
+
+  factory FoodCategory.fromJson(jsonData) {
+    var list = jsonData["items"] as List<dynamic>;
+    List<FoodItem> itemsList = list
+        .map((item) => FoodItem.fromJson(item))
+        .toList();
+    return FoodCategory(
+      categoryName: jsonData["category_name"],
+      items: itemsList,
+    );
   }
 }

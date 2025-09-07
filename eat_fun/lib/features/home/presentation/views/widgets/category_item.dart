@@ -11,7 +11,7 @@ class CategoryItem extends StatelessWidget {
   });
   final bool isSelected;
   final VoidCallback onTap;
-  final FoodModel categoryName;
+  final FoodCategory categoryName;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

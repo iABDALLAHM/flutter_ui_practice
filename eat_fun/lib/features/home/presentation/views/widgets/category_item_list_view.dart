@@ -9,9 +9,9 @@ class CategoryItemListView extends StatelessWidget {
     required this.selectedCategory,
     required this.categoryList,
   });
-  final Function(FoodModel) onTap;
-  final FoodModel selectedCategory;
-  final List<FoodModel> categoryList;
+  final Function(FoodCategory) onTap;
+  final FoodCategory selectedCategory;
+  final List<FoodCategory> categoryList;
 
   @override
   Widget build(BuildContext context) {

@@ -13,35 +13,24 @@ class CategorySection extends StatefulWidget {
 }
 
 class _CategorySectionState extends State<CategorySection> {
-  List<FoodModel> category = [];
-  List<FoodModel> foods = [];
-  FoodModel? whatIsSelected;
+  List<FoodCategory> foods = [];
+  FoodCategory? whatIsSelected;
 
   @override
   void initState() {
-    loadingCategorise();
-    loadingFoods();
+    getFoodCategory();
     super.initState();
   }
 
-  Future<void> loadingCategorise() async {
-    category = await GetFoodServices().getCategories();
-    if (category.isNotEmpty) {
-      whatIsSelected = category.first;
-    }
-    setState(() {});
-  }
-
-  Future<void> loadingFoods() async {
-    foods = await GetFoodServices().getFood(
-      categoryName: " whatIsSelected!.categoryName",
-    );
+  Future<void> getFoodCategory() async {
+    foods = await GetFoodServices().getFood();
+    whatIsSelected = foods.first;
     setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    if (category.isEmpty || whatIsSelected == null) {
+    if (foods.isEmpty || whatIsSelected == null) {
       return const Center(child: CircularProgressIndicator());
     }
     return Column(
@@ -55,7 +44,7 @@ class _CategorySectionState extends State<CategorySection> {
         SizedBox(
           height: 140,
           child: CategoryItemListView(
-            categoryList: category,
+            categoryList: foods,
             selectedCategory: whatIsSelected!,
             onTap: (selected) {
               setState(() {
@@ -72,7 +61,7 @@ class _CategorySectionState extends State<CategorySection> {
         const SizedBox(height: 20),
         SizedBox(
           height: 250,
-          child: CategoryCardItemListView(foodsList: foods),
+          child: CategoryCardItemListView(itemList: whatIsSelected!.items),
         ),
       ],
     );

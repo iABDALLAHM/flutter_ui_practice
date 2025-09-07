@@ -3,8 +3,8 @@ import 'package:eat_fun/features/home/data/models/food_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCardItem extends StatelessWidget {
-  const CategoryCardItem({super.key, required this.foodModel});
-  final FoodModel foodModel;
+  const CategoryCardItem({super.key, required this.item});
+  final FoodItem item;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,10 +18,10 @@ class CategoryCardItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image(image: AssetImage(foodModel.foodImage!)),
+            Image(image: AssetImage(item.foodImage!)),
             Expanded(
               child: Text(
-                foodModel.foodName!,
+                item.foodName!,
                 style: Styels.textStyle25,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -37,7 +37,7 @@ class CategoryCardItem extends StatelessWidget {
               ],
             ),
             Text(
-              "${foodModel.foodPrice.toString()}"
+              "${item.foodPrice!.toString()}"
               r"$",
               style: Styels.textStyle25,
             ),
