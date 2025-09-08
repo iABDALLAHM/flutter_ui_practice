@@ -1,7 +1,7 @@
 [
     {
         "category_name": "Pizza",
-        "category_icon": "assets/images/pizzaIcon.png",
+        "category_icon": "pizzaSlice",
         "items": [
             {
                 "food_name": "Pepperoni Pizza",
@@ -37,7 +37,7 @@
     },
     {
         "category_name": "Burgers",
-        "category_icon": "assets/imagesburgerIcon.png",
+        "category_icon": "burger",
         "items": [
             {
                 "food_name": "Cheeseburger",
@@ -73,7 +73,7 @@
     },
     {
         "category_name": "Drinks",
-        "category_icon": "assets/images/drinkIcon.png",
+        "category_icon": "iceCream",
         "items": [
             {
                 "food_name": "Coca Cola",

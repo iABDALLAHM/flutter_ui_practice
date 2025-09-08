@@ -15,6 +15,11 @@ class CategoryItem extends StatelessWidget {
   final FoodCategory category;
   @override
   Widget build(BuildContext context) {
+    final Map<String, IconData> categoryIconsMap = {
+      "pizzaSlice": FontAwesomeIcons.pizzaSlice,
+      "burger": FontAwesomeIcons.burger,
+      "iceCream": FontAwesomeIcons.iceCream,
+    };
     return GestureDetector(
       onTap: onTap,
       child: Column(
@@ -39,7 +44,7 @@ class CategoryItem extends StatelessWidget {
             height: 80,
             child: Center(
               child: Icon(
-                FontAwesomeIcons.pizzaSlice,
+                categoryIconsMap[category.categoryIcon] ?? Icons.fastfood,
                 size: 35,
                 color: isSelected ? Colors.black87 : Colors.grey,
               ),

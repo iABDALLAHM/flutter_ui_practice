@@ -29,7 +29,7 @@ class FoodCategory {
         .map((item) => FoodItem.fromJson(item))
         .toList();
     return FoodCategory(
-      categoryIcon: jsonData["category_image"],
+      categoryIcon: jsonData["category_icon"],
       categoryName: jsonData["category_name"],
       items: itemsList,
     );
