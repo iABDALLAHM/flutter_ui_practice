@@ -8,16 +8,19 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text("Choose the", style: Styels.textStyle25),
-        Text("FOOD you LOVE", style: Styels.textStyle25),
-        const SizedBox(height: 20),
-        CustomFoodSearch(hintText: "Search for a food item"),
-        const SizedBox(height: 10),
-        Expanded(child: CategorySection()),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Choose the", style: Styels.textStyle25),
+          Text("FOOD you LOVE", style: Styels.textStyle25),
+          const SizedBox(height: 20),
+          CustomFoodSearch(hintText: "Search for a food item"),
+          const SizedBox(height: 10),
+          Expanded(child: CategorySection()),
+        ],
+      ),
     );
   }
 }

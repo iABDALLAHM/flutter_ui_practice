@@ -8,4 +8,5 @@ abstract class AssetData {
   static String authPizza = "assets/images/auth_pizza.png";
   static String profilePicture = "assets/images/profilePicture.png";
   static String homeBurger = "assets/images/homeburger.png";
+  static String homeLogo = "assets/images/homeLogo.png";
 }

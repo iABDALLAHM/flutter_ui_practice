@@ -6,32 +6,32 @@
             {
                 "food_name": "Pepperoni Pizza",
                 "food_price": 444,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/pizza.jpg"
             },
             {
                 "food_name": "Margherita Pizza",
                 "food_price": 430,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/pizza.jpg"
             },
             {
                 "food_name": "Quattro Formaggi",
                 "food_price": 500,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/pizza.jpg"
             },
             {
                 "food_name": "Hawaiian Pizza",
                 "food_price": 600,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/pizza.jpg"
             },
             {
                 "food_name": "Capricciosa",
                 "food_price": 100,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/pizza.jpg"
             },
             {
                 "food_name": "Vegetarian Pizza",
                 "food_price": 500,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/pizza.jpg"
             }
         ]
     },
@@ -78,32 +78,32 @@
             {
                 "food_name": "Coca Cola",
                 "food_price": 735,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/cups.png"
             },
             {
                 "food_name": "Orange Juice",
                 "food_price": 557,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/cups.png"
             },
             {
                 "food_name": "Lemon Mint Juice",
                 "food_price": 743,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/cups.png"
             },
             {
                 "food_name": "Iced Coffee",
                 "food_price": 57,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/cups.png"
             },
             {
                 "food_name": "Smoothie",
                 "food_price": 733,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/cups.png"
             },
             {
                 "food_name": "Iced Tea",
                 "food_price": 573,
-                "food_image": "assets/images/homeburger.png"
+                "food_image": "assets/images/cups.png"
             }
         ]
     }

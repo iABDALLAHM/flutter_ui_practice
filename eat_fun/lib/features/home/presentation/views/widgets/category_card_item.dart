@@ -18,7 +18,7 @@ class CategoryCardItem extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image(image: AssetImage(item.foodImage!)),
+            Image(width: 200, height: 110, image: AssetImage(item.foodImage!)),
             Expanded(
               child: Text(
                 item.foodName!,

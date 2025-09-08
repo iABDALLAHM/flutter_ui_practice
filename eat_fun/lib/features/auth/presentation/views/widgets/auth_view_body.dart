@@ -14,15 +14,13 @@ class AuthViewBody extends StatelessWidget {
         children: [
           Image(image: AssetImage(AssetData.mainAppLogo)),
           AuthCard(),
-          const SizedBox(height: 30),
+          const SizedBox(height: 60),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image(image: AssetImage(AssetData.authPizza)),
               const SizedBox(width: 70),
-              Image(
-                image: AssetImage(AssetData.authBurger),
-              ),
+              Image(image: AssetImage(AssetData.authBurger)),
             ],
           ),
         ],

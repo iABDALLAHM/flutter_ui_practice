@@ -8,7 +8,7 @@ class HomwView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: const Color.fromARGB(200, 194, 194, 194),
       appBar: _buildAppBar(),
       body: SafeArea(child: HomeViewBody()),
     );
