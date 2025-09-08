@@ -14,9 +14,14 @@ class FoodItem {
 
 class FoodCategory {
   final String categoryName;
+  final String categoryIcon;
   final List<FoodItem> items;
 
-  FoodCategory({required this.categoryName, required this.items});
+  FoodCategory({
+    required this.categoryIcon,
+    required this.categoryName,
+    required this.items,
+  });
 
   factory FoodCategory.fromJson(jsonData) {
     var list = jsonData["items"] as List<dynamic>;
@@ -24,6 +29,7 @@ class FoodCategory {
         .map((item) => FoodItem.fromJson(item))
         .toList();
     return FoodCategory(
+      categoryIcon: jsonData["category_image"],
       categoryName: jsonData["category_name"],
       items: itemsList,
     );

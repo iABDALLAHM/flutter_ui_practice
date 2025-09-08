@@ -23,7 +23,7 @@ class CategoryItemListView extends StatelessWidget {
           padding: EdgeInsets.only(right: 10),
           child: CategoryItem(
             onTap: () => onTap(categoryList[index]),
-            categoryName: categoryList[index],
+            category: categoryList[index],
             isSelected: categoryList[index] == selectedCategory,
           ),
         );

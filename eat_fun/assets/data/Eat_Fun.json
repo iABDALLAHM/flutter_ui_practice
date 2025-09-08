@@ -1,40 +1,108 @@
 [
     {
         "category_name": "Pizza",
+        "category_icon": "assets/images/pizzaIcon.png",
         "items": [
             {
                 "food_name": "Pepperoni Pizza",
-                "food_price": 4,
+                "food_price": 444,
                 "food_image": "assets/images/homeburger.png"
             },
             {
                 "food_name": "Margherita Pizza",
-                "food_price": 13,
+                "food_price": 430,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Quattro Formaggi",
+                "food_price": 500,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Hawaiian Pizza",
+                "food_price": 600,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Capricciosa",
+                "food_price": 100,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Vegetarian Pizza",
+                "food_price": 500,
                 "food_image": "assets/images/homeburger.png"
             }
         ]
     },
     {
         "category_name": "Burgers",
+        "category_icon": "assets/imagesburgerIcon.png",
         "items": [
             {
+                "food_name": "Cheeseburger",
+                "food_price": 333,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Double Burger",
+                "food_price": 399,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Bacon Burger",
+                "food_price": 499,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Veggie Burger",
+                "food_price": 453,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Mushroom Swiss Burger",
+                "food_price": 453,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
                 "food_name": "Chicken Burger",
-                "food_price": 71,
+                "food_price": 453,
                 "food_image": "assets/images/homeburger.png"
             }
         ]
     },
     {
         "category_name": "Drinks",
+        "category_icon": "assets/images/drinkIcon.png",
         "items": [
             {
                 "food_name": "Coca Cola",
-                "food_price": 73,
+                "food_price": 735,
                 "food_image": "assets/images/homeburger.png"
             },
             {
                 "food_name": "Orange Juice",
+                "food_price": 557,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Lemon Mint Juice",
+                "food_price": 743,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Iced Coffee",
                 "food_price": 57,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Smoothie",
+                "food_price": 733,
+                "food_image": "assets/images/homeburger.png"
+            },
+            {
+                "food_name": "Iced Tea",
+                "food_price": 573,
                 "food_image": "assets/images/homeburger.png"
             }
         ]
