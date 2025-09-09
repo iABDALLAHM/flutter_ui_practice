@@ -10,6 +10,9 @@ class MovieApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(routerConfig: AppRouter.routes);
+    return MaterialApp.router(
+      routerConfig: AppRouter.routes,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
