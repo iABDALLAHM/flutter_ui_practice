@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/constants/cons.dart';
 import 'package:movie_app/core/utils/assets.dart';
 import 'package:movie_app/core/utils/styels.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/film_time.dart';
@@ -34,7 +35,12 @@ class PopularCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Venom Let There Be Carnage", style: Styels.textStyle18),
+              Text(
+                "Venom Let There Be Carnage",
+                style: Styels.textStyle18.copyWith(
+                  fontFamily: kMulishFontFamily,
+                ),
+              ),
               const SizedBox(height: 8),
               RatingSection(),
               const SizedBox(height: 8),
@@ -54,4 +60,3 @@ class PopularCard extends StatelessWidget {
     );
   }
 }
-

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/constants/cons.dart';
 import 'package:movie_app/core/utils/assets.dart';
 import 'package:movie_app/core/utils/styels.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/rating_section.dart';
@@ -34,7 +35,8 @@ class NowShowingCard extends StatelessWidget {
           width: 190,
           child: Text(
             "Spiderman: No Way Home",
-            style: Styels.textStyle18,
+
+            style: Styels.textStyle18.copyWith(fontFamily: kMulishFontFamily),
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
           ),

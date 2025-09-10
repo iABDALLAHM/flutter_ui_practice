@@ -1,1 +1,2 @@
-final String kFontFamily ="Merriweather";
+final String kMerriweatherFontFamily = "Merriweather";
+final String kMulishFontFamily = "Mulish";

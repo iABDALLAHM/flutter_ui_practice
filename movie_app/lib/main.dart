@@ -12,7 +12,7 @@ class MovieApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(fontFamily: kFontFamily),
+      theme: ThemeData(fontFamily: kMerriweatherFontFamily),
       routerConfig: AppRouter.routes,
       debugShowCheckedModeBanner: false,
     );

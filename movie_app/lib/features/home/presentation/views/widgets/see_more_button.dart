@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/constants/cons.dart';
 
 class SeeMoreButton extends StatelessWidget {
   const SeeMoreButton({super.key});
@@ -14,7 +15,10 @@ class SeeMoreButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.grey),
         ),
-        child: Text("See more", style: TextStyle(color: Colors.grey)),
+        child: Text(
+          "See more",
+          style: TextStyle(color: Colors.grey, fontFamily: kMulishFontFamily),
+        ),
       ),
     );
   }
