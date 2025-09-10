@@ -15,5 +15,3 @@ class NowShowingCardListView extends StatelessWidget {
     );
   }
 }
-
-

@@ -20,17 +20,17 @@ class HomeView extends StatelessWidget {
       backgroundColor: Colors.white,
       title: Text(
         "FilmKu",
-        style: Styels.textStyle20.copyWith(color:AppColor.kPrimaryColor),
+        style: Styels.textStyle20.copyWith(color: AppColor.kPrimaryColor),
       ),
       centerTitle: true,
       leading: IconButton(
         onPressed: () {},
-        icon: Icon(Icons.menu, color:AppColor.kPrimaryColor),
+        icon: Icon(Icons.menu, color: AppColor.kPrimaryColor),
       ),
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.notifications_on, color:AppColor.kPrimaryColor),
+          icon: Icon(Icons.notifications_on, color: AppColor.kPrimaryColor),
         ),
       ],
     );
