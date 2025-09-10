@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/utils/app_color.dart';
+import 'package:movie_app/core/utils/styels.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,11 +18,20 @@ class HomeView extends StatelessWidget {
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.white,
-      title: Text("FilmKu"),
+      title: Text(
+        "FilmKu",
+        style: Styels.textStyle20.copyWith(color:AppColor.kPrimaryColor),
+      ),
       centerTitle: true,
-      leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+      leading: IconButton(
+        onPressed: () {},
+        icon: Icon(Icons.menu, color:AppColor.kPrimaryColor),
+      ),
       actions: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.notifications_on)),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.notifications_on, color:AppColor.kPrimaryColor),
+        ),
       ],
     );
   }

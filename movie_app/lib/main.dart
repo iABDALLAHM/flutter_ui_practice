@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/constants/cons.dart';
 import 'package:movie_app/core/utils/app_router.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MovieApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData(fontFamily: kFontFamily),
       routerConfig: AppRouter.routes,
       debugShowCheckedModeBanner: false,
     );
