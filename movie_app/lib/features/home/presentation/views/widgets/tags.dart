@@ -17,6 +17,7 @@ class Tags extends StatelessWidget {
         text,
         style: TextStyle(
           color: Color(0xff88A4E8),
+          fontWeight: FontWeight.bold,
           fontFamily: kMulishFontFamily,
         ),
       ),
