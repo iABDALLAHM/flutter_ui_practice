@@ -12,6 +12,38 @@ class HomeView extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
       body: SafeArea(child: HomeViewBody()),
+      bottomNavigationBar: _buildBottomAppBar(),
+    );
+  }
+
+  BottomAppBar _buildBottomAppBar() {
+    return BottomAppBar(
+      shape: const CircularNotchedRectangle(),
+      clipBehavior: Clip.antiAlias,
+      notchMargin: 5,
+      elevation: 5,
+      color: Colors.white,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: const Icon(Icons.movie_creation_outlined),
+            color: AppColor.kPrimaryColor,
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.confirmation_number_outlined),
+            color: AppColor.kPrimaryColor,
+
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.bookmark_outline),
+            color: AppColor.kPrimaryColor,
+            onPressed: () {},
+          ),
+        ],
+      ),
     );
   }
 
