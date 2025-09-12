@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:movie_app/core/utils/app_color.dart';
+import 'package:movie_app/core/utils/app_router.dart';
 import 'package:movie_app/core/utils/styels.dart';
 import 'package:movie_app/features/details/presentation/views/widgets/cast_character.dart';
 import 'package:movie_app/core/widgets/see_more_button.dart';
@@ -22,7 +24,11 @@ class CastingSection extends StatelessWidget {
                   color: AppColor.kPrimaryColor,
                 ),
               ),
-              SeeMoreButton(onTap: () {}),
+              SeeMoreButton(
+                onTap: () {
+                  GoRouter.of(context).push(AppRouter.kCastingView);
+                },
+              ),
             ],
           ),
         ),

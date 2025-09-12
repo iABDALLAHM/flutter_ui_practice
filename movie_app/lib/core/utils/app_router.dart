@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:movie_app/features/details/presentation/views/casting_view.dart';
 import 'package:movie_app/features/details/presentation/views/details_view.dart';
 import 'package:movie_app/features/home/presentation/views/home_view.dart';
 import 'package:movie_app/features/home/presentation/views/now_showing_view.dart';
@@ -9,6 +10,7 @@ class AppRouter {
   static String kDetailsView = "/details-view";
   static String kNowShowingView = "/now-showing-view";
   static String kPopularView = "/popular-view";
+  static String kCastingView = "/casting-view";
 
   static GoRouter routes = GoRouter(
     routes: [
@@ -19,6 +21,7 @@ class AppRouter {
         builder: (context, state) => NowShowingView(),
       ),
       GoRoute(path: kPopularView, builder: (context, state) => PopularView()),
+      GoRoute(path: kCastingView, builder: (context, state) => CastingView()),
     ],
   );
 }
