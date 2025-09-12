@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/core/utils/app_color.dart';
 import 'package:movie_app/core/utils/styels.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/now_showing_card_list_view.dart';
-import 'package:movie_app/features/home/presentation/views/widgets/see_more_button.dart';
+import 'package:movie_app/core/widgets/see_more_button.dart';
 
 class NowShowingSection extends StatelessWidget {
   const NowShowingSection({super.key});
@@ -21,7 +21,7 @@ class NowShowingSection extends StatelessWidget {
                   color: AppColor.kPrimaryColor,
                 ),
               ),
-              SeeMoreButton(),
+              SeeMoreButton(onTap: () {}),
             ],
           ),
           const SizedBox(height: 20),

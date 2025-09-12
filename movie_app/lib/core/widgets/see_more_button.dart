@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/core/constants/cons.dart';
 
 class SeeMoreButton extends StatelessWidget {
-  const SeeMoreButton({super.key});
-
+  const SeeMoreButton({super.key, required this.onTap});
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 7, vertical: 2),
         decoration: BoxDecoration(
