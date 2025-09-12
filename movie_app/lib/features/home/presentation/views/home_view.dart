@@ -34,7 +34,6 @@ class HomeView extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.confirmation_number_outlined),
             color: AppColor.kPrimaryColor,
-
             onPressed: () {},
           ),
           IconButton(

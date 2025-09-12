@@ -6,12 +6,16 @@ abstract class Styels {
     fontWeight: FontWeight.bold,
   );
 
-    static TextStyle textStyle20 = TextStyle(
+  static TextStyle textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
   );
-    static TextStyle textStyle16 = TextStyle(
+  static TextStyle textStyle16 = TextStyle(
     fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle textStyle14 = TextStyle(
+    fontSize: 14,
     fontWeight: FontWeight.bold,
   );
 }
