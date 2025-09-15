@@ -2,141 +2,147 @@
     "nowShowing": [
         {
             "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "title": "Inception",
+            "posterUrl": "assets/images/Inception.jpeg",
             "rating": 8.5,
             "genre": [
                 "Action",
                 "Adventure",
-                "Fantasy"
+                "Drama"
             ],
             "length": 148,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 2,
+            "title": "The Dark Knight",
+            "posterUrl": "assets/images/The Dark Knight.jpeg",
             "rating": 8.5,
             "genre": [
-                "Action",
-                "Adventure",
-                "Fantasy"
+                "Drama"
             ],
-            "length": 148,
+            "length": 152,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 3,
+            "title": "Interstellar",
+            "posterUrl": "assets/images/Interstellar.jpeg",
             "rating": 8.5,
             "genre": [
-                "Action",
-                "Adventure",
-                "Fantasy"
+                "Drama",
+                "Romance"
             ],
-            "length": 148,
+            "length": 169,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 4,
+            "title": "The Shawshank Redemption",
+            "posterUrl": "assets/images/The Shawshank Redemption.jpg",
             "rating": 8.5,
             "genre": [
-                "Action",
-                "Adventure",
-                "Fantasy"
+                "Drama"
             ],
-            "length": 148,
+            "length": 175,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 5,
+            "title": "The Matrix",
+            "posterUrl": "assets/images/The Matrix.jpeg",
             "rating": 8.5,
             "genre": [
                 "Action",
-                "Adventure",
-                "Fantasy"
+                "Sci-Fi"
             ],
-            "length": 148,
+            "length": 154,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 6,
+            "title": "Fight Club",
+            "posterUrl": "assets/images/Fight Club.jpg",
             "rating": 8.5,
             "genre": [
-                "Action",
-                "Adventure",
-                "Fantasy"
+                "Crime",
+                "Drama"
             ],
-            "length": 148,
+            "length": 136,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 7,
+            "title": "The Godfather",
+            "posterUrl": "assets/images/The Godfather.jpg",
             "rating": 8.5,
             "genre": [
-                "Action",
-                "Adventure",
-                "Fantasy"
+                "Crime",
+                "Drama"
             ],
-            "length": 148,
+            "length": 139,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 8,
+            "title": "Pulp Fiction",
+            "posterUrl": "assets/images/Pulp Fiction.jpeg",
             "rating": 8.5,
             "genre": [
-                "Action",
                 "Adventure",
-                "Fantasy"
+                "Drama",
+                "Sci-Fi"
             ],
-            "length": 148,
+            "length": 142,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         },
         {
-            "id": 1,
-            "title": "Spiderman: No Way Home",
-            "posterUrl": "assets/images/spiderman.png",
+            "id": 9,
+            "title": "Forrest Gump",
+            "posterUrl": "assets/images/Forrest Gump.jpg",
             "rating": 8.5,
             "genre": [
                 "Action",
-                "Adventure",
-                "Fantasy"
+                "Crime",
+                "Drama"
             ],
-            "length": 148,
+            "length": 142,
+            "language": "English",
+            "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
+        },
+        {
+            "id": 10,
+            "title": "The Lord of the Rings: The Fellowship of the Ring",
+            "posterUrl": "assets/images/Forrest Gump.jpg",
+            "rating": 8.5,
+            "genre": [
+                "Action",
+                "Sci-Fi",
+                "Thriller"
+            ],
+            "length": 155,
             "language": "English",
             "description": "Peter Parker seeks Doctor Strange's help to make his identity a secret again."
         }
     ],
     "popular": [
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 1,
+            "title": "Avatar",
+            "posterUrl": "assets/images/Avatar.jpg",
             "rating": 8.2,
             "genre": [
-                "Crime",
+                "Adventure",
                 "Drama",
-                "Action"
+                "Sci-Fi"
             ],
             "length": 176,
             "language": "English",
@@ -144,127 +150,119 @@
         },
         {
             "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "title": "Avengers: Endgame",
+            "posterUrl": "assets/images/Avengers.jpg",
             "rating": 8.2,
             "genre": [
-                "Crime",
-                "Drama",
-                "Action"
+                "Action",
+                "Sci-Fi",
+                "Thriller"
             ],
-            "length": 176,
+            "length": 124,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 3,
+            "title": "Titanic",
+            "posterUrl": "assets/images/Titanic.jpg",
             "rating": 8.2,
             "genre": [
+                "Action",
                 "Crime",
-                "Drama",
-                "Action"
+                "Drama"
             ],
-            "length": 176,
+            "length": 167,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 4,
+            "title": "The Lion King",
+            "posterUrl": "assets/images/The Lion King.jpeg",
             "rating": 8.2,
             "genre": [
                 "Crime",
-                "Drama",
-                "Action"
+                "Drama"
             ],
-            "length": 176,
+            "length": 156,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 5,
+            "title": "Frozen",
+            "posterUrl": "assets/images/Frozen.jpeg",
             "rating": 8.2,
             "genre": [
                 "Crime",
-                "Drama",
-                "Action"
+                "Drama"
             ],
-            "length": 176,
+            "length": 230,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 6,
+            "title": "Spider-Man: No Way Home",
+            "posterUrl": "assets/images/Spider-Man.jpeg",
             "rating": 8.2,
             "genre": [
-                "Crime",
-                "Drama",
-                "Action"
+                "Action",
+                "Sci-Fi"
             ],
-            "length": 176,
+            "length": 140,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 7,
+            "title": "Black Panther",
+            "posterUrl": "assets/images/Black Panther.jpeg",
             "rating": 8.2,
             "genre": [
-                "Crime",
-                "Drama",
-                "Action"
+                "Drama"
             ],
-            "length": 176,
+            "length": 111,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 8,
+            "title": "Joker",
+            "posterUrl": "assets/images/Joker.jpeg",
             "rating": 8.2,
             "genre": [
-                "Crime",
                 "Drama",
-                "Action"
+                "Romance"
             ],
-            "length": 176,
+            "length": 155,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 9,
+            "title": "Minions",
+            "posterUrl": "assets/images/Minions.jpeg",
             "rating": 8.2,
             "genre": [
-                "Crime",
-                "Drama",
-                "Action"
+                "Drama"
             ],
-            "length": 176,
+            "length": 126,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         },
         {
-            "id": 2,
-            "title": "The Batman",
-            "posterUrl": "assets/images/batman.png",
+            "id": 10,
+            "title": "Harry Potter and the Sorcerer’s Stone",
+            "posterUrl": "assets/images/Harry Potter and the Sorcerer’s Stone.jpg",
             "rating": 8.2,
             "genre": [
-                "Crime",
-                "Drama",
-                "Action"
+                "Action",
+                "Adventure",
+                "Drama"
             ],
-            "length": 176,
+            "length": 122,
             "language": "English",
             "description": "Batman uncovers corruption in Gotham while pursuing the Riddler."
         }
