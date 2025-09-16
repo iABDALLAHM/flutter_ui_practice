@@ -23,7 +23,7 @@ class FilmModel {
       filmName: json["title"],
       posterUrl: json["posterUrl"],
       rating: json["rating"],
-      genre: json["genre"],
+      genre: List<String>.from(json["genre"]),
       length: json["length"],
       language: json["language"],
       description: json["description"],
