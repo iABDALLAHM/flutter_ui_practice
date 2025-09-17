@@ -2,7 +2,7 @@ class FilmModel {
   final int filmId;
   final String filmName;
   final String posterUrl;
-  final double rating;
+  final num rating;
   final List<String> genre;
   final int length;
   final String language;

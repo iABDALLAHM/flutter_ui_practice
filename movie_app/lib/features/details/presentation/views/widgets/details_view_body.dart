@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/core/utils/assets.dart';
 import 'package:movie_app/features/details/presentation/views/widgets/film_details.dart';
+import 'package:movie_app/features/home/data/models/film_model.dart';
 
 class DetailsViewBody extends StatelessWidget {
-  const DetailsViewBody({super.key});
-
+  const DetailsViewBody({super.key, required this.filmModel});
+  final FilmModel filmModel;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
         buildSliverAppBar(),
-        SliverList(delegate: SliverChildListDelegate([FilmDetails()])),
+        SliverList(
+          delegate: SliverChildListDelegate([FilmDetails(film: filmModel)]),
+        ),
       ],
     );
   }
@@ -22,7 +24,7 @@ class DetailsViewBody extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         background: Image(
           fit: BoxFit.fill,
-          image: AssetImage(AssetsData.kNowShowingCard),
+          image: AssetImage(filmModel.posterUrl),
         ),
       ),
       actions: [

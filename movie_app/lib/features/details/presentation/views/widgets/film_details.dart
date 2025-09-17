@@ -4,12 +4,13 @@ import 'package:movie_app/core/utils/styels.dart';
 import 'package:movie_app/features/details/presentation/views/widgets/casting_section.dart';
 import 'package:movie_app/features/details/presentation/views/widgets/description_section.dart';
 import 'package:movie_app/features/details/presentation/views/widgets/film_info.dart';
+import 'package:movie_app/features/home/data/models/film_model.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/rating_section.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/tags.dart';
 
 class FilmDetails extends StatelessWidget {
-  const FilmDetails({super.key});
-
+  const FilmDetails({super.key, required this.film});
+  final FilmModel film;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +23,7 @@ class FilmDetails extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Spiderman: No Way Home",
+                film.filmName,
                 style: Styels.textStyle20.copyWith(
                   fontFamily: kMulishFontFamily,
                 ),
@@ -31,19 +32,23 @@ class FilmDetails extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          RatingSection(),
+          RatingSection(rating: film.rating),
           const SizedBox(height: 16),
           Row(
             children: [
-              Tags(text: "ACTION"),
-              Tags(text: "ADVENTURE"),
-              Tags(text: "FANTASY"),
+              Tags(text: "${film.genre[0].toUpperCase()}"),
+              Tags(text: "${film.genre[0].toUpperCase()}"),
+              Tags(text: "${film.genre[0].toUpperCase()}"),
             ],
           ),
           const SizedBox(height: 16),
-          FilmInfo(),
+          FilmInfo(
+            lenght: film.length,
+            lang: film.language,
+            rating: film.rating,
+          ),
           const SizedBox(height: 16),
-          DescriptionSection(),
+          DescriptionSection(filmDes: film.description),
           const SizedBox(height: 24),
           CastingSection(),
         ],

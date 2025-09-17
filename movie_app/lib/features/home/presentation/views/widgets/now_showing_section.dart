@@ -3,12 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:movie_app/core/utils/app_color.dart';
 import 'package:movie_app/core/utils/app_router.dart';
 import 'package:movie_app/core/utils/styels.dart';
+import 'package:movie_app/features/home/data/models/film_model.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/now_showing_card_list_view.dart';
 import 'package:movie_app/core/widgets/see_more_button.dart';
 
 class NowShowingSection extends StatelessWidget {
-  const NowShowingSection({super.key});
-
+  const NowShowingSection({super.key, required this.filmsList});
+  final List<FilmModel> filmsList;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -31,7 +32,10 @@ class NowShowingSection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
-          SizedBox(height: 350, child: NowShowingCardListView()),
+          SizedBox(
+            height: 350,
+            child: NowShowingCardListView(filmsList: filmsList),
+          ),
         ],
       ),
     );

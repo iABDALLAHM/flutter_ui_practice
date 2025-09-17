@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movie_app/core/constants/cons.dart';
 import 'package:movie_app/core/utils/app_router.dart';
-import 'package:movie_app/core/utils/assets.dart';
 import 'package:movie_app/core/utils/styels.dart';
+import 'package:movie_app/features/home/data/models/film_model.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/rating_section.dart';
 
 class NowShowingCard extends StatelessWidget {
-  const NowShowingCard({super.key});
-
+  const NowShowingCard({super.key, required this.film});
+  final FilmModel film;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kDetailsView);
+        GoRouter.of(context).push(AppRouter.kDetailsView, extra: film);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +32,7 @@ class NowShowingCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage(AssetsData.kNowShowingCard),
+                image: AssetImage(film.posterUrl),
               ),
             ),
           ),
@@ -40,14 +40,14 @@ class NowShowingCard extends StatelessWidget {
           SizedBox(
             width: 190,
             child: Text(
-              "Spiderman: No Way Home",
+              film.filmName,
               style: Styels.textStyle18.copyWith(fontFamily: kMulishFontFamily),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
           ),
           const SizedBox(height: 10),
-          RatingSection(),
+          RatingSection(rating: film.rating),
         ],
       ),
     );
