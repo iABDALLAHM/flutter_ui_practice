@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:movie_app/core/constants/cons.dart';
 import 'package:movie_app/core/utils/app_router.dart';
-import 'package:movie_app/core/utils/assets.dart';
 import 'package:movie_app/core/utils/styels.dart';
+import 'package:movie_app/features/home/data/models/film_model.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/film_time.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/rating_section.dart';
 import 'package:movie_app/features/home/presentation/views/widgets/tags.dart';
 
 class PopularCard extends StatelessWidget {
-  const PopularCard({super.key});
-
+  const PopularCard({super.key, required this.filmModel});
+  final FilmModel filmModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kDetailsView);
+        GoRouter.of(context).push(AppRouter.kDetailsView, extra: filmModel);
       },
       child: Row(
         children: [
@@ -32,7 +32,7 @@ class PopularCard extends StatelessWidget {
               ],
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage(AssetsData.kNowShowingCard),
+                image: AssetImage(filmModel.posterUrl),
               ),
             ),
           ),
@@ -42,13 +42,13 @@ class PopularCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Venom Let There Be Carnage",
+                  filmModel.filmName,
                   style: Styels.textStyle18.copyWith(
                     fontFamily: kMulishFontFamily,
                   ),
                 ),
                 const SizedBox(height: 8),
-                RatingSection(),
+                RatingSection(rating: filmModel.rating),
                 const SizedBox(height: 8),
                 Row(
                   children: [

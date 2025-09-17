@@ -47,7 +47,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
               ],
             ),
           ),
-          SliverToBoxAdapter(child: PopularSection()),
+          SliverToBoxAdapter(child: PopularSection(filmList: popular)),
         ],
       ),
     );
