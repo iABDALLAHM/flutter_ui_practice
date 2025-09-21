@@ -15,6 +15,8 @@ class MovieApp extends StatelessWidget {
       theme: ThemeData(fontFamily: kMerriweatherFontFamily),
       routerConfig: AppRouter.routes,
       debugShowCheckedModeBanner: false,
+
+      
     );
   }
 }
