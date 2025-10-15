@@ -10,6 +10,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0XFFF7F9FA),
       appBar: MediaQuery.sizeOf(context).width < 800
           ? AppBar(backgroundColor: Colors.white)
           : null,
