@@ -3,9 +3,7 @@ import 'package:responsive_dash_board/widgets/all_expenses_and_quick_invoice_sec
 import 'package:responsive_dash_board/widgets/my_card_and_income_section.dart';
 
 class ScrollableDesktopLayout extends StatelessWidget {
-  const ScrollableDesktopLayout({
-    super.key,
-  });
+  const ScrollableDesktopLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,7 @@ class ScrollableDesktopLayout extends StatelessWidget {
               const SizedBox(width: 24),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                  padding: const EdgeInsets.only(top: 40, bottom: 20),
                   child: MyCardAndIncomeSection(),
                 ),
               ),

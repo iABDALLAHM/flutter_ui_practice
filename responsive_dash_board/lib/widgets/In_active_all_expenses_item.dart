@@ -26,16 +26,30 @@ class InActiveAllExpesnsesItem extends StatelessWidget {
             imageColor: Color(0xff4EB7F2),
           ),
           const SizedBox(height: 34),
-          Text(allExpensesItemModel.title, style: AppStyles.styleSemiBold16),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyles.styleSemiBold16,
+            ),
+          ),
           const SizedBox(height: 8),
 
-          Text(allExpensesItemModel.date, style: AppStyles.styleRegular14),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyles.styleRegular14,
+            ),
+          ),
           const SizedBox(height: 8 * 2),
-
-          Text(
-            r"$"
-            "${allExpensesItemModel.amount}",
-            style: AppStyles.styleSemiBold24,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              r"$"
+              "${allExpensesItemModel.amount}",
+              style: AppStyles.styleSemiBold24,
+            ),
           ),
         ],
       ),

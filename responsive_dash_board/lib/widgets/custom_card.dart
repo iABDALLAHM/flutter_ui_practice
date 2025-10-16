@@ -24,16 +24,25 @@ class CustomCard extends StatelessWidget {
               children: [
                 ListTile(
                   contentPadding: EdgeInsets.only(left: 31, right: 47, top: 20),
-                  title: Text(
-                    "Name card",
-                    style: AppStyles.styleRegular16.copyWith(
-                      color: Colors.white,
+                  title: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Text(
+                      "Name card",
+                      style: AppStyles.styleRegular16.copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                  subtitle: Text(
-                    "Syah Bandi",
-                    style: AppStyles.styleMedium20.copyWith(
-                      color: Colors.white,
+                  subtitle: FittedBox(
+                    alignment: AlignmentDirectional.centerStart,
+
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      "Syah Bandi",
+                      style: AppStyles.styleMedium20.copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                   trailing: SvgPicture.asset(Assets.imagesGallery),
@@ -44,23 +53,32 @@ class CustomCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
-                        "0918 8124 0042 8129",
-                        style: AppStyles.styleSemiBold24.copyWith(
-                          color: Colors.white,
+                      FittedBox(
+                        alignment: AlignmentDirectional.centerEnd,
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          "0918 8124 0042 8129",
+                          style: AppStyles.styleSemiBold24.copyWith(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 12),
-                      Text(
-                        "12/20-124",
-                        style: AppStyles.styleRegular16.copyWith(
-                          color: Colors.white,
+                      const SizedBox(height: 6),
+                      FittedBox(
+                        alignment: AlignmentDirectional.centerEnd,
+
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          "12/20-124",
+                          style: AppStyles.styleRegular16.copyWith(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 24),
                     ],
                   ),
                 ),
+                Flexible(child: SizedBox(height: 24)),
               ],
             ),
           ),

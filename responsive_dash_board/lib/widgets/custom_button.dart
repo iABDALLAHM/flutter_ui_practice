@@ -24,10 +24,13 @@ class CustomButton extends StatelessWidget {
           backgroundColor: backgroundColor ?? Colors.white,
           foregroundColor: foregroundColor ?? Color(0xff4EB7F2),
         ),
-        child: Text(
-          text,
-          style: AppStyles.styleSemiBold18.copyWith(
-            color: foregroundColor ?? Color(0xff4EB7F2),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            text,
+            style: AppStyles.styleSemiBold18.copyWith(
+              color: foregroundColor ?? Color(0xff4EB7F2),
+            ),
           ),
         ),
       ),

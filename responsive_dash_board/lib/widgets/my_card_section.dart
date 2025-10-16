@@ -23,6 +23,12 @@ class _MyCardSectionState extends State<MyCardSection> {
   }
 
   @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return CustomBackgroundContainer(
       child: Column(

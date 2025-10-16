@@ -12,6 +12,7 @@ class DesktopDashBoardLayout extends StatelessWidget {
         Expanded(flex: 1, child: CustomDrawer()),
         const SizedBox(width: 32),
         Expanded(flex: 4, child: ScrollableDesktopLayout()),
+        const SizedBox(width: 32),
       ],
     );
   }

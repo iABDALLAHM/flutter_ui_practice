@@ -23,9 +23,13 @@ class IncomeDetailsItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      title: Text(
-        incomeChartModel.title,
-        style: AppStyles.styleRegular16.copyWith(color: Color(0xff064061)),
+      title: FittedBox(
+        alignment: Alignment.centerLeft,
+        fit: BoxFit.scaleDown,
+        child: Text(
+          incomeChartModel.title,
+          style: AppStyles.styleRegular16.copyWith(color: Color(0xff064061)),
+        ),
       ),
       trailing: Text(
         incomeChartModel.value,

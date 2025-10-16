@@ -35,27 +35,46 @@ class _AllExpensesItemListState extends State<AllExpensesItemList> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: allExpensesItemsList.asMap().entries.map((element) {
-        var value = element.value;
-        var index = element.key;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              if (isSelected != index) {
-                isSelected = index;
-                setState(() {});
-              }
+              isSelected = 0;
+              setState(() {});
             },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesItem(
-                allExpensesItemModel: value,
-                isActive: isSelected == index ? true : false,
-              ),
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItemsList[0],
+              isActive: isSelected == 0 ? true : false,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              isSelected = 1;
+              setState(() {});
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItemsList[1],
+              isActive: isSelected == 1 ? true : false,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              isSelected = 2;
+              setState(() {});
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: allExpensesItemsList[2],
+              isActive: isSelected == 2 ? true : false,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

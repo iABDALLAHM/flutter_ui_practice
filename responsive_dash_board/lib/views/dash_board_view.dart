@@ -33,7 +33,10 @@ class _HomeViewState extends State<HomeView> {
             )
           : null,
       body: CustomAdaptiveLayout(
-        mobileLayout: (context) => MobileDashBoardLayout(),
+        mobileLayout: (context) => Padding(
+          padding: const EdgeInsets.only(top: 10, bottom: 10),
+          child: MobileDashBoardLayout(),
+        ),
         desktopLayout: (context) => DesktopDashBoardLayout(),
         tabletLayout: (context) => TableDashBoardLayout(),
       ),
